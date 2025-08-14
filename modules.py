@@ -340,3 +340,14 @@ def calculate_and_store_returns(db_path: str, trends_table: str, returns_table: 
         print(f"Database error: {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+
+def vaccum_db(db_path: str) -> None:
+    try:
+        conn = sqlite3.connect(db_path)
+        conn.execute('VACUUM;')
+        conn.close()
+        print(f"Database at {db_path} has been vacuumed successfully.")
+    except sqlite3.Error as e:
+        print(f"Database error: {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")

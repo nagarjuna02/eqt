@@ -15,7 +15,8 @@ from modules import (
     get_price_data,
     delete_records_from_date,
     calculate_and_save_trends,
-    calculate_and_store_returns
+    calculate_and_store_returns,
+    vaccum_db
 )
 
 # Load environment variables from .env file
@@ -171,3 +172,8 @@ if __name__ == '__main__':
         trends_table=collector.trends_table_name,
         returns_table=collector.returns_table_name
     )
+    # Vacuum the database
+    vaccum_db(db_path=collector.db_path)
+
+
+

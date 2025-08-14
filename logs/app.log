@@ -805,3 +805,62 @@
 2025-08-14 00:11:20,352 - modules - INFO - Successfully saved 51 new NAV records to 'mf_nav'.
 2025-08-14 00:11:20,352 - modules - INFO - Starting trend calculation process...
 2025-08-14 00:11:21,497 - modules - INFO - Successfully calculated and saved 31248 new records to 'mf_nav_trends'.
+2025-08-14 06:06:57,487 - __main__ - ERROR - Funds JSON file not found at files/mutual_funds.json
+2025-08-14 06:06:57,488 - __main__ - INFO - Starting data collection process...
+2025-08-14 06:06:57,520 - modules - INFO - Successfully saved 0 new records to 'mf'.
+2025-08-14 06:06:57,526 - modules - INFO - Successfully saved 0 new NAV records to 'mf_nav'.
+2025-08-14 06:06:57,526 - modules - INFO - Starting trend calculation process...
+2025-08-14 06:06:59,002 - modules - INFO - Successfully calculated and saved 31248 new records to 'mf_nav_trends'.
+2025-08-14 06:08:11,049 - __main__ - INFO - Starting data collection process...
+2025-08-14 06:08:11,050 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-14 06:08:11,050 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-14 06:08:11,082 - __main__ - INFO -   Last data: 2025-08-13 00:00:00, fetching from: 2025-08-13
+2025-08-14 06:08:11,107 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-13 onwards from mf_nav.
+2025-08-14 06:08:14,638 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-14 06:08:14,660 - __main__ - INFO -   Last data: 2025-08-13 00:00:00, fetching from: 2025-08-13
+2025-08-14 06:08:14,714 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-13 onwards from mf_nav.
+2025-08-14 06:08:17,702 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-14 06:08:17,713 - __main__ - INFO -   Last data: 2025-08-13 00:00:00, fetching from: 2025-08-13
+2025-08-14 06:08:17,732 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-13 onwards from mf_nav.
+2025-08-14 06:08:20,823 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-14 06:08:20,852 - __main__ - INFO -   Last data: 2025-08-13 00:00:00, fetching from: 2025-08-13
+2025-08-14 06:08:20,916 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-13 onwards from mf_nav.
+2025-08-14 06:08:23,735 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-14 06:08:23,757 - __main__ - INFO -   Last data: 2025-08-13 00:00:00, fetching from: 2025-08-13
+2025-08-14 06:08:23,797 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-13 onwards from mf_nav.
+2025-08-14 06:08:26,795 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-14 06:08:26,815 - __main__ - INFO -   Last data: 2025-08-13 00:00:00, fetching from: 2025-08-13
+2025-08-14 06:08:26,844 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-13 onwards from mf_nav.
+2025-08-14 06:08:29,624 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-14 06:08:29,625 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-14 06:08:29,645 - __main__ - INFO -   Last data: 2025-08-12 00:00:00, fetching from: 2025-08-12
+2025-08-14 06:08:29,668 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-12 onwards from mf_nav.
+2025-08-14 06:08:32,644 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-14 06:08:32,657 - __main__ - INFO -   Last data: 2025-08-11 00:00:00, fetching from: 2025-08-11
+2025-08-14 06:08:32,686 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-11 onwards from mf_nav.
+2025-08-14 06:08:35,620 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-14 06:08:35,630 - __main__ - INFO -   Last data: 2025-08-12 00:00:00, fetching from: 2025-08-12
+2025-08-14 06:08:35,649 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-12 onwards from mf_nav.
+2025-08-14 06:08:38,614 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-14 06:08:38,631 - __main__ - INFO -   Last data: 2025-08-11 00:00:00, fetching from: 2025-08-11
+2025-08-14 06:08:38,656 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-11 onwards from mf_nav.
+2025-08-14 06:08:41,654 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-14 06:08:41,670 - __main__ - INFO -   Last data: 2025-08-12 00:00:00, fetching from: 2025-08-12
+2025-08-14 06:08:41,694 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-12 onwards from mf_nav.
+2025-08-14 06:08:44,672 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-14 06:08:44,672 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-14 06:08:44,684 - __main__ - INFO -   Last data: 2025-08-12 00:00:00, fetching from: 2025-08-12
+2025-08-14 06:08:44,706 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-12 onwards from mf_nav.
+2025-08-14 06:08:48,148 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-14 06:08:48,166 - __main__ - INFO -   Last data: 2025-08-12 00:00:00, fetching from: 2025-08-12
+2025-08-14 06:08:48,187 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-12 onwards from mf_nav.
+2025-08-14 06:08:51,165 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-14 06:08:51,175 - __main__ - INFO -   Last data: 2025-08-12 00:00:00, fetching from: 2025-08-12
+2025-08-14 06:08:51,195 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-12 onwards from mf_nav.
+2025-08-14 06:08:54,221 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-14 06:08:54,256 - __main__ - INFO -   Last data: 2025-08-12 00:00:00, fetching from: 2025-08-12
+2025-08-14 06:08:54,324 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-12 onwards from mf_nav.
+2025-08-14 06:08:57,511 - modules - INFO - Successfully saved 15 new records to 'mf'.
+2025-08-14 06:08:57,529 - modules - INFO - Successfully saved 24 new NAV records to 'mf_nav'.
+2025-08-14 06:08:57,530 - modules - INFO - Starting trend calculation process...
+2025-08-14 06:08:58,873 - modules - INFO - Successfully calculated and saved 31257 new records to 'mf_nav_trends'.
