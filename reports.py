@@ -86,10 +86,12 @@ with st.sidebar:
     st.header("Filters")
     # Fund Category selector
     available_categories = sorted(df_trends['Category'].unique())
+    # Default to only "Indexes" if present, else fallback to all
+    default_categories = ["Indexes"] if "Indexes" in available_categories else available_categories
     selected_categories = st.multiselect(
         "Select fund category(s):",
         options=available_categories,
-        default=available_categories,
+        default=default_categories,
         placeholder="Choose fund categories...",
     )
 
