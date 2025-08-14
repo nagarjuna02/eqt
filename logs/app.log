@@ -1,0 +1,807 @@
+2025-08-09 12:26:40,102 - __main__ - INFO - Starting data collection process...
+2025-08-09 12:26:40,104 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-09 12:26:40,104 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-09 12:26:40,104 - modules - ERROR - Database error getting last date for ^NSEI: no such table: mf_nav
+2025-08-09 12:26:40,104 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:26:45,014 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-09 12:26:45,014 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-09 12:26:45,047 - modules - INFO - Successfully saved 282 new records to 'mf_nav'.
+2025-08-09 12:27:51,404 - __main__ - INFO - Starting data collection process...
+2025-08-09 12:27:51,404 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-09 12:27:51,404 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-09 12:27:51,407 - modules - ERROR - Database error getting last date for ^NSEI: no such table: mf_nav
+2025-08-09 12:27:51,407 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:27:52,705 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-09 12:27:52,705 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-09 12:27:52,738 - modules - INFO - Successfully saved 282 new records to 'mf_nav'.
+2025-08-09 12:28:30,469 - __main__ - INFO - Starting data collection process...
+2025-08-09 12:28:30,469 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-09 12:28:30,469 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-09 12:28:30,478 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 12:28:30,492 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards.
+2025-08-09 12:28:31,804 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-09 12:28:31,804 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-09 12:28:31,831 - modules - INFO - Successfully saved 1 new records to 'mf_nav'.
+2025-08-09 12:32:00,053 - __main__ - INFO - Starting data collection process...
+2025-08-09 12:32:00,053 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-09 12:32:00,053 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-09 12:32:00,053 - modules - ERROR - Database error getting last date for ^NSEI: no such table: mf_nav
+2025-08-09 12:32:00,058 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:02,055 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-09 12:32:02,057 - modules - ERROR - Database error getting last date for ^NSEBANK: no such table: mf_nav
+2025-08-09 12:32:02,057 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:06,270 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-09 12:32:06,271 - modules - ERROR - Database error getting last date for ^CNXFMCG: no such table: mf_nav
+2025-08-09 12:32:06,271 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:11,138 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-09 12:32:11,138 - modules - ERROR - Database error getting last date for ^CNXPHARMA: no such table: mf_nav
+2025-08-09 12:32:11,143 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:18,448 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-09 12:32:18,448 - modules - ERROR - Database error getting last date for ^CNXIT: no such table: mf_nav
+2025-08-09 12:32:18,448 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:25,181 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-09 12:32:25,184 - modules - ERROR - Database error getting last date for ^CNXINFRA: no such table: mf_nav
+2025-08-09 12:32:25,184 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:26,833 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-09 12:32:26,833 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-09 12:32:26,837 - modules - ERROR - Database error getting last date for 0P0000XVJX.BO: no such table: mf_nav
+2025-08-09 12:32:26,837 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:29,377 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-09 12:32:29,379 - modules - ERROR - Database error getting last date for 0P0000XVL7.BO: no such table: mf_nav
+2025-08-09 12:32:29,379 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:32,431 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-09 12:32:32,433 - modules - ERROR - Database error getting last date for 0P00015HLN.BO: no such table: mf_nav
+2025-08-09 12:32:32,433 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:37,786 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-09 12:32:37,787 - modules - ERROR - Database error getting last date for 0P0000XVKP.BO: no such table: mf_nav
+2025-08-09 12:32:37,788 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:38,923 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-09 12:32:38,925 - modules - ERROR - Database error getting last date for 0P0000XVJM.BO: no such table: mf_nav
+2025-08-09 12:32:38,925 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:43,285 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-09 12:32:43,286 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-09 12:32:43,287 - modules - ERROR - Database error getting last date for 0P0000XW8Z.BO: no such table: mf_nav
+2025-08-09 12:32:43,288 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:44,925 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-09 12:32:44,928 - modules - ERROR - Database error getting last date for 0P0000XVL9.BO: no such table: mf_nav
+2025-08-09 12:32:44,928 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:48,335 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-09 12:32:48,337 - modules - ERROR - Database error getting last date for 0P0000XW04.BO: no such table: mf_nav
+2025-08-09 12:32:48,337 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:50,501 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-09 12:32:50,502 - modules - ERROR - Database error getting last date for 0P0000XUZ4.BO: no such table: mf_nav
+2025-08-09 12:32:50,503 - __main__ - INFO -   No existing data, fetching full history from: 2024-06-25
+2025-08-09 12:32:53,359 - modules - INFO - Successfully saved 4199 new records to 'mf_nav'.
+2025-08-09 13:08:46,133 - __main__ - INFO - Starting data collection process...
+2025-08-09 13:08:46,144 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-09 13:08:46,144 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-09 13:08:46,145 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:08:46,163 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards.
+2025-08-09 13:08:48,751 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-09 13:08:48,755 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:08:48,772 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-08 onwards.
+2025-08-09 13:08:51,872 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-09 13:08:51,873 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:08:51,894 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-08 onwards.
+2025-08-09 13:08:53,314 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-09 13:08:53,314 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:08:53,325 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-08 onwards.
+2025-08-09 13:08:54,264 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-09 13:08:54,267 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:08:54,284 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-08 onwards.
+2025-08-09 13:08:56,787 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-09 13:08:56,787 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:08:56,799 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-08 onwards.
+2025-08-09 13:08:58,223 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-09 13:08:58,223 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-09 13:08:58,223 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:08:58,237 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-08 onwards.
+2025-08-09 13:09:01,396 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-09 13:09:01,396 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-09 13:09:01,417 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-07 onwards.
+2025-08-09 13:09:02,357 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-09 13:09:02,365 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:09:02,374 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-08 onwards.
+2025-08-09 13:09:03,355 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-09 13:09:03,364 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-09 13:09:03,375 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-07 onwards.
+2025-08-09 13:09:04,293 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-09 13:09:04,293 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:09:04,313 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-08 onwards.
+2025-08-09 13:09:07,589 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-09 13:09:07,589 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-09 13:09:07,593 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:09:07,604 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-08 onwards.
+2025-08-09 13:09:08,564 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-09 13:09:08,564 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:09:08,586 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-08 onwards.
+2025-08-09 13:09:13,349 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-09 13:09:13,353 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:09:13,371 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-08 onwards.
+2025-08-09 13:09:14,974 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-09 13:09:14,974 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:09:14,992 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-08 onwards.
+2025-08-09 13:09:18,193 - modules - INFO - Successfully saved 15 new records to 'mf_nav'.
+2025-08-09 13:09:18,193 - __main__ - INFO - Starting trends calculation...
+2025-08-09 13:09:18,193 - modules - INFO - Starting trend calculation process...
+2025-08-09 13:09:18,193 - modules - ERROR - Error during trends calculation: Execution failed on sql 'SELECT Ticker, Date, Adj_Close FROM mf_nav': no such column: Adj_Close
+2025-08-09 13:09:18,193 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-09 13:10:50,753 - __main__ - INFO - Starting data collection process...
+2025-08-09 13:10:50,753 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-09 13:10:50,753 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-09 13:10:50,761 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:10:50,776 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards.
+2025-08-09 13:10:53,578 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-09 13:10:53,582 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:10:53,602 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-08 onwards.
+2025-08-09 13:10:54,503 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-09 13:10:54,503 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:10:54,528 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-08 onwards.
+2025-08-09 13:10:55,483 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-09 13:10:55,488 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:10:55,505 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-08 onwards.
+2025-08-09 13:10:56,463 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-09 13:10:56,468 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:10:56,480 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-08 onwards.
+2025-08-09 13:10:57,493 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-09 13:10:57,493 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:10:57,508 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-08 onwards.
+2025-08-09 13:10:58,460 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-09 13:10:58,460 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-09 13:10:58,463 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:10:58,473 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-08 onwards.
+2025-08-09 13:10:59,455 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-09 13:10:59,459 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-09 13:10:59,477 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-07 onwards.
+2025-08-09 13:11:02,503 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-09 13:11:02,503 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:11:02,524 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-08 onwards.
+2025-08-09 13:11:03,473 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-09 13:11:03,473 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-09 13:11:03,489 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-07 onwards.
+2025-08-09 13:11:04,459 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-09 13:11:04,463 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:11:04,477 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-08 onwards.
+2025-08-09 13:11:07,589 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-09 13:11:07,589 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-09 13:11:07,598 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:11:07,616 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-08 onwards.
+2025-08-09 13:11:08,574 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-09 13:11:08,579 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:11:08,597 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-08 onwards.
+2025-08-09 13:11:09,568 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-09 13:11:09,575 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:11:09,580 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-08 onwards.
+2025-08-09 13:11:11,949 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-09 13:11:11,958 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-09 13:11:11,968 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-08 onwards.
+2025-08-09 13:11:13,908 - modules - INFO - Successfully saved 15 new records to 'mf_nav'.
+2025-08-09 13:11:13,908 - __main__ - INFO - Starting trends calculation...
+2025-08-09 13:11:13,910 - modules - INFO - Starting trend calculation process...
+2025-08-09 13:11:14,293 - modules - INFO - Successfully calculated and saved 4199 new records to 'mf_nav_trends'.
+2025-08-09 13:11:14,294 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-10 01:11:24,707 - __main__ - INFO - Starting data collection process...
+2025-08-10 01:11:24,709 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 01:11:24,711 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 01:11:24,732 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:24,772 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards.
+2025-08-10 01:11:26,636 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 01:11:26,649 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:26,675 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-08 onwards.
+2025-08-10 01:11:27,780 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 01:11:27,790 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:27,809 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-08 onwards.
+2025-08-10 01:11:28,841 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 01:11:28,849 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:28,873 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-08 onwards.
+2025-08-10 01:11:29,921 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 01:11:29,931 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:29,949 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-08 onwards.
+2025-08-10 01:11:31,016 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 01:11:31,024 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:31,042 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-08 onwards.
+2025-08-10 01:11:32,082 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 01:11:32,084 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 01:11:32,094 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:32,113 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-08 onwards.
+2025-08-10 01:11:33,563 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 01:11:33,572 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 01:11:33,590 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-07 onwards.
+2025-08-10 01:11:34,596 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 01:11:34,603 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:34,621 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-08 onwards.
+2025-08-10 01:11:35,684 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 01:11:35,692 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 01:11:35,713 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-07 onwards.
+2025-08-10 01:11:36,757 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 01:11:36,766 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:36,785 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-08 onwards.
+2025-08-10 01:11:37,856 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 01:11:37,856 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 01:11:37,864 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:37,883 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-08 onwards.
+2025-08-10 01:11:38,938 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 01:11:38,946 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:38,967 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-08 onwards.
+2025-08-10 01:11:40,210 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 01:11:40,217 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:40,239 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-08 onwards.
+2025-08-10 01:11:41,415 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 01:11:41,423 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:11:41,442 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-08 onwards.
+2025-08-10 01:11:42,619 - modules - INFO - Successfully saved 15 new records to 'mf_nav'.
+2025-08-10 01:11:42,620 - __main__ - INFO - Starting trends calculation...
+2025-08-10 01:11:42,620 - modules - INFO - Starting trend calculation process...
+2025-08-10 01:11:43,855 - modules - INFO - Successfully calculated and saved 4199 new records to 'mf_nav_trends'.
+2025-08-10 01:11:43,857 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-10 01:23:43,231 - __main__ - INFO - Starting data collection process...
+2025-08-10 01:23:43,231 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 01:23:43,231 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 01:23:43,245 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:43,258 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards.
+2025-08-10 01:23:44,480 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 01:23:44,486 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:44,486 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-08 onwards.
+2025-08-10 01:23:45,440 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 01:23:45,442 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:45,463 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-08 onwards.
+2025-08-10 01:23:46,431 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 01:23:46,434 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:46,452 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-08 onwards.
+2025-08-10 01:23:47,422 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 01:23:47,430 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:47,443 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-08 onwards.
+2025-08-10 01:23:48,658 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 01:23:48,658 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:48,680 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-08 onwards.
+2025-08-10 01:23:49,637 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 01:23:49,637 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 01:23:49,646 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:49,646 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-08 onwards.
+2025-08-10 01:23:50,661 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 01:23:50,666 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 01:23:50,680 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-07 onwards.
+2025-08-10 01:23:51,618 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 01:23:51,623 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:51,642 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-08 onwards.
+2025-08-10 01:23:52,612 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 01:23:52,612 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 01:23:52,628 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-07 onwards.
+2025-08-10 01:23:53,645 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 01:23:53,645 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:53,673 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-08 onwards.
+2025-08-10 01:23:54,647 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 01:23:54,647 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 01:23:54,647 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:54,657 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-08 onwards.
+2025-08-10 01:23:55,656 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 01:23:55,656 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:55,679 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-08 onwards.
+2025-08-10 01:23:56,660 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 01:23:56,660 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:56,670 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-08 onwards.
+2025-08-10 01:23:57,658 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 01:23:57,665 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 01:23:57,686 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-08 onwards.
+2025-08-10 01:23:58,735 - modules - INFO - Successfully saved 15 new records to 'mf_nav'.
+2025-08-10 01:23:58,737 - __main__ - INFO - Starting trends calculation...
+2025-08-10 01:23:58,737 - modules - INFO - Starting trend calculation process...
+2025-08-10 01:23:59,366 - modules - INFO - Successfully calculated and saved 4199 new records to 'mf_nav_trends'.
+2025-08-10 01:23:59,366 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-10 01:44:31,529 - __main__ - ERROR - Funds JSON file not found at files/funds.json
+2025-08-10 01:44:31,530 - __main__ - INFO - Starting data collection process...
+2025-08-10 01:44:31,531 - __main__ - INFO - No master data was fetched to save.
+2025-08-10 01:44:31,531 - __main__ - INFO - No new NAV data was fetched to save.
+2025-08-10 01:44:31,531 - __main__ - INFO - Starting trends calculation...
+2025-08-10 01:44:31,532 - modules - INFO - Starting trend calculation process...
+2025-08-10 01:44:31,534 - modules - ERROR - Error during trends calculation: Execution failed on sql 'SELECT Ticker, Date, Close FROM mf_nav': no such table: mf_nav
+2025-08-10 01:44:31,534 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-10 01:46:14,405 - __main__ - ERROR - Funds JSON file not found at files/funds.json
+2025-08-10 01:46:14,405 - __main__ - INFO - Starting data collection process...
+2025-08-10 01:46:14,405 - __main__ - INFO - No master data was fetched to save.
+2025-08-10 01:46:14,405 - __main__ - INFO - No new NAV data was fetched to save.
+2025-08-10 01:46:14,405 - __main__ - INFO - Starting trends calculation...
+2025-08-10 01:46:14,405 - modules - INFO - Starting trend calculation process...
+2025-08-10 01:46:14,405 - modules - ERROR - Error during trends calculation: Execution failed on sql 'SELECT Ticker, Date, Close FROM mf_nav': no such table: mf_nav
+2025-08-10 01:46:14,405 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-10 01:47:27,316 - __main__ - ERROR - Funds JSON file not found at files/funds.json
+2025-08-10 01:47:27,316 - __main__ - INFO - Starting data collection process...
+2025-08-10 01:47:27,323 - modules - ERROR - SQLite error saving master data: near ")": syntax error
+2025-08-10 01:47:27,327 - modules - ERROR - SQLite error saving NAV data: near ")": syntax error
+2025-08-10 01:47:27,328 - __main__ - INFO - Starting trends calculation...
+2025-08-10 01:47:27,328 - modules - INFO - Starting trend calculation process...
+2025-08-10 01:47:27,331 - modules - ERROR - Error during trends calculation: Execution failed on sql 'SELECT Ticker, Date, Close FROM mf_nav': no such table: mf_nav
+2025-08-10 01:47:27,332 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-10 01:49:34,686 - __main__ - ERROR - Funds JSON file not found at files/funds.json
+2025-08-10 01:49:34,687 - __main__ - INFO - Starting data collection process...
+2025-08-10 01:49:34,705 - modules - INFO - Successfully saved 0 new records to 'mf'.
+2025-08-10 01:49:34,725 - modules - INFO - Successfully saved 0 new NAV records to 'mf_nav'.
+2025-08-10 01:49:34,726 - __main__ - INFO - Starting trends calculation...
+2025-08-10 01:49:34,726 - modules - INFO - Starting trend calculation process...
+2025-08-10 01:49:34,731 - modules - WARNING - No NAV data found in mf_nav to calculate trends.
+2025-08-10 01:49:34,731 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-10 01:52:34,466 - __main__ - INFO - Starting data collection process...
+2025-08-10 01:52:34,466 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 01:52:34,466 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 01:52:34,466 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 01:54:38,347 - __main__ - INFO - Starting data collection process...
+2025-08-10 01:54:38,347 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 01:54:38,347 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 01:54:38,347 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:23,985 - __main__ - INFO - Starting data collection process...
+2025-08-10 02:04:23,986 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 02:04:23,987 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 02:04:23,989 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:25,252 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 02:04:25,253 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:26,361 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 02:04:26,363 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:27,401 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 02:04:27,403 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:28,485 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 02:04:28,486 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:29,570 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 02:04:29,571 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:30,637 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 02:04:30,637 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 02:04:30,638 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:31,730 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 02:04:31,731 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:33,224 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 02:04:33,225 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:34,353 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 02:04:34,354 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:35,842 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 02:04:35,844 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:36,979 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 02:04:36,979 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 02:04:36,980 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:38,064 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 02:04:38,066 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:39,130 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 02:04:39,131 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:40,244 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 02:04:40,245 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:04:41,362 - modules - INFO - Successfully saved 15 new records to 'mf'.
+2025-08-10 02:04:41,599 - modules - INFO - Successfully saved 31212 new NAV records to 'mf_nav'.
+2025-08-10 02:04:41,599 - __main__ - INFO - Starting trends calculation...
+2025-08-10 02:04:41,600 - modules - INFO - Starting trend calculation process...
+2025-08-10 02:04:41,790 - modules - ERROR - Error during trends calculation: unsupported operand type(s) for -: 'str' and 'str'
+2025-08-10 02:04:41,794 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-10 02:06:29,090 - __main__ - INFO - Starting data collection process...
+2025-08-10 02:06:29,096 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 02:06:29,096 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 02:06:29,117 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:29,147 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:30,340 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 02:06:30,346 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:30,378 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:31,317 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 02:06:31,317 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:31,346 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:32,323 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 02:06:32,336 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:32,362 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:33,323 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 02:06:33,337 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:33,361 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:34,343 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 02:06:34,360 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:34,392 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:35,401 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 02:06:35,401 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 02:06:35,423 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:35,454 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:36,441 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 02:06:36,449 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 02:06:36,481 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-07 onwards from mf_nav.
+2025-08-10 02:06:37,470 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 02:06:37,489 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:37,509 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:38,449 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 02:06:38,456 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 02:06:38,489 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-07 onwards from mf_nav.
+2025-08-10 02:06:39,435 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 02:06:39,441 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:39,456 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:40,395 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 02:06:40,395 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 02:06:40,395 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:40,438 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:41,399 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 02:06:41,415 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:41,443 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:42,409 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 02:06:42,420 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:42,443 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:43,376 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 02:06:43,390 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:06:43,409 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:06:44,460 - modules - INFO - Successfully saved 15 new records to 'mf'.
+2025-08-10 02:06:44,475 - modules - INFO - Successfully saved 15 new NAV records to 'mf_nav'.
+2025-08-10 02:06:44,475 - __main__ - INFO - Starting trends calculation...
+2025-08-10 02:06:44,475 - modules - INFO - Starting trend calculation process...
+2025-08-10 02:06:45,418 - modules - INFO - Successfully calculated and saved 31212 new records to 'mf_nav_trends'.
+2025-08-10 02:06:45,418 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-10 02:12:06,494 - __main__ - INFO - Starting data collection process...
+2025-08-10 02:12:06,494 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 02:12:06,495 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 02:12:06,513 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:06,542 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:07,746 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 02:12:07,756 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:07,782 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:08,763 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 02:12:08,773 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:08,796 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:09,746 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 02:12:09,759 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:09,780 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:10,738 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 02:12:10,757 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:10,792 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:11,730 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 02:12:11,742 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:11,771 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:12,770 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 02:12:12,771 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 02:12:12,786 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:12,822 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:13,789 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 02:12:13,810 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 02:12:13,863 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-07 onwards from mf_nav.
+2025-08-10 02:12:14,871 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 02:12:14,888 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:14,915 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:15,902 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 02:12:15,917 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 02:12:15,945 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-07 onwards from mf_nav.
+2025-08-10 02:12:16,888 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 02:12:16,900 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:16,929 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:17,840 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 02:12:17,840 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 02:12:17,852 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:17,873 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:18,922 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 02:12:18,934 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:18,960 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:19,907 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 02:12:19,921 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:19,952 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:20,912 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 02:12:20,925 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:12:20,954 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:12:21,927 - modules - INFO - Successfully saved 15 new records to 'mf'.
+2025-08-10 02:12:21,942 - modules - INFO - Successfully saved 15 new NAV records to 'mf_nav'.
+2025-08-10 02:12:21,943 - __main__ - INFO - Starting trends calculation...
+2025-08-10 02:12:21,943 - modules - INFO - Starting trend calculation process...
+2025-08-10 02:12:24,236 - modules - INFO - Successfully calculated and saved 31212 new records to 'mf_nav_trends'.
+2025-08-10 02:12:24,250 - __main__ - INFO - Data collection and trends calculation complete.
+2025-08-10 02:38:48,146 - __main__ - INFO - Starting data collection process...
+2025-08-10 02:38:48,147 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 02:38:48,147 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 02:38:48,151 - modules - ERROR - Database error getting last date for ^NSEI from mf_nav: no such table: mf_nav
+2025-08-10 02:38:48,151 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:38:49,678 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 02:38:49,678 - modules - ERROR - Database error getting last date for ^NSEBANK from mf_nav: no such table: mf_nav
+2025-08-10 02:38:49,678 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:38:50,803 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 02:38:50,807 - modules - ERROR - Database error getting last date for ^CNXFMCG from mf_nav: no such table: mf_nav
+2025-08-10 02:38:50,809 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:38:51,946 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 02:38:51,949 - modules - ERROR - Database error getting last date for ^CNXPHARMA from mf_nav: no such table: mf_nav
+2025-08-10 02:38:51,949 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:38:53,055 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 02:38:53,056 - modules - ERROR - Database error getting last date for ^CNXIT from mf_nav: no such table: mf_nav
+2025-08-10 02:38:53,056 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:38:54,173 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 02:38:54,173 - modules - ERROR - Database error getting last date for ^CNXINFRA from mf_nav: no such table: mf_nav
+2025-08-10 02:38:54,173 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:38:55,280 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 02:38:55,280 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 02:38:55,280 - modules - ERROR - Database error getting last date for 0P0000XVJX.BO from mf_nav: no such table: mf_nav
+2025-08-10 02:38:55,280 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:38:56,397 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 02:38:56,397 - modules - ERROR - Database error getting last date for 0P0000XVL7.BO from mf_nav: no such table: mf_nav
+2025-08-10 02:38:56,397 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:38:57,566 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 02:38:57,568 - modules - ERROR - Database error getting last date for 0P00015HLN.BO from mf_nav: no such table: mf_nav
+2025-08-10 02:38:57,568 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:38:58,720 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 02:38:58,721 - modules - ERROR - Database error getting last date for 0P0000XVKP.BO from mf_nav: no such table: mf_nav
+2025-08-10 02:38:58,722 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:38:59,827 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 02:38:59,829 - modules - ERROR - Database error getting last date for 0P0000XVJM.BO from mf_nav: no such table: mf_nav
+2025-08-10 02:38:59,829 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:39:00,907 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 02:39:00,907 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 02:39:00,907 - modules - ERROR - Database error getting last date for 0P0000XW8Z.BO from mf_nav: no such table: mf_nav
+2025-08-10 02:39:00,907 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:39:02,008 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 02:39:02,009 - modules - ERROR - Database error getting last date for 0P0000XVL9.BO from mf_nav: no such table: mf_nav
+2025-08-10 02:39:02,009 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:39:03,117 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 02:39:03,117 - modules - ERROR - Database error getting last date for 0P0000XW04.BO from mf_nav: no such table: mf_nav
+2025-08-10 02:39:03,117 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:39:04,178 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 02:39:04,178 - modules - ERROR - Database error getting last date for 0P0000XUZ4.BO from mf_nav: no such table: mf_nav
+2025-08-10 02:39:04,178 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:39:05,256 - modules - INFO - Successfully saved 15 new records to 'mf'.
+2025-08-10 02:39:05,463 - modules - INFO - Successfully saved 31212 new NAV records to 'mf_nav'.
+2025-08-10 02:39:29,731 - __main__ - INFO - Starting data collection process...
+2025-08-10 02:39:29,731 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 02:39:29,731 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 02:39:29,760 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:29,785 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:30,984 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 02:39:30,998 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:31,018 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:31,982 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 02:39:31,992 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:32,014 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:33,004 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 02:39:33,013 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:33,038 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:34,007 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 02:39:34,018 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:34,040 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:35,046 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 02:39:35,051 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:35,080 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:36,043 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 02:39:36,043 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 02:39:36,043 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:36,074 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:37,019 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 02:39:37,027 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 02:39:37,053 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-07 onwards from mf_nav.
+2025-08-10 02:39:38,017 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 02:39:38,031 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:38,052 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:39,076 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 02:39:39,095 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 02:39:39,114 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-07 onwards from mf_nav.
+2025-08-10 02:39:40,043 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 02:39:40,043 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:40,078 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:41,079 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 02:39:41,079 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 02:39:41,093 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:41,111 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:42,111 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 02:39:42,123 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:42,142 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:43,094 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 02:39:43,112 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:43,136 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:44,076 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 02:39:44,088 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:39:44,112 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:39:45,109 - modules - INFO - Successfully saved 15 new records to 'mf'.
+2025-08-10 02:39:45,126 - modules - INFO - Successfully saved 15 new NAV records to 'mf_nav'.
+2025-08-10 02:41:22,024 - __main__ - INFO - Starting data collection process...
+2025-08-10 02:41:22,024 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 02:41:22,025 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 02:41:22,043 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:22,066 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:23,702 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 02:41:23,713 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:23,734 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:24,720 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 02:41:24,729 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:24,749 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:25,706 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 02:41:25,717 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:25,739 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:26,666 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 02:41:26,677 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:26,696 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:27,661 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 02:41:27,670 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:27,687 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:28,655 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 02:41:28,655 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 02:41:28,665 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:28,682 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:29,635 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 02:41:29,644 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 02:41:29,660 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-07 onwards from mf_nav.
+2025-08-10 02:41:30,635 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 02:41:30,645 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:30,663 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:31,612 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 02:41:31,622 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 02:41:31,640 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-07 onwards from mf_nav.
+2025-08-10 02:41:32,994 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 02:41:33,008 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:33,035 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:34,012 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 02:41:34,012 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 02:41:34,023 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:34,041 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:34,973 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 02:41:34,983 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:35,001 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:36,083 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 02:41:36,097 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:36,123 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:37,116 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 02:41:37,129 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:41:37,152 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:41:38,177 - modules - INFO - Successfully saved 15 new records to 'mf'.
+2025-08-10 02:41:38,201 - modules - INFO - Successfully saved 15 new NAV records to 'mf_nav'.
+2025-08-10 02:46:00,743 - __main__ - INFO - Starting data collection process...
+2025-08-10 02:46:00,755 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 02:46:00,755 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 02:46:00,755 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,761 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 02:46:00,761 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,763 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 02:46:00,764 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,766 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 02:46:00,767 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,770 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 02:46:00,771 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,772 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 02:46:00,773 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,775 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 02:46:00,776 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 02:46:00,777 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,779 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 02:46:00,780 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,781 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 02:46:00,782 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,784 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 02:46:00,785 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,786 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 02:46:00,787 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,788 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 02:46:00,789 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 02:46:00,789 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,791 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 02:46:00,791 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,794 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 02:46:00,795 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:46:00,798 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 02:46:00,798 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,675 - __main__ - INFO - Starting data collection process...
+2025-08-10 02:47:07,675 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 02:47:07,675 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 02:47:07,675 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,675 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 02:47:07,675 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,686 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 02:47:07,686 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,688 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 02:47:07,689 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,692 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 02:47:07,692 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,694 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 02:47:07,695 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,697 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 02:47:07,698 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 02:47:07,698 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,698 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 02:47:07,700 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,702 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 02:47:07,703 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,705 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 02:47:07,705 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,709 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 02:47:07,709 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,711 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 02:47:07,712 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 02:47:07,712 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,715 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 02:47:07,715 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,717 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 02:47:07,718 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:47:07,720 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 02:47:07,722 - __main__ - INFO -   No existing data, fetching full history from: 2015-06-29
+2025-08-10 02:51:40,175 - __main__ - INFO - Starting data collection process...
+2025-08-10 02:51:40,175 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-10 02:51:40,175 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-10 02:51:40,175 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:40,216 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:41,363 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-10 02:51:41,363 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:41,389 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:42,342 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-10 02:51:42,352 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:42,381 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:43,328 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-10 02:51:43,347 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:43,372 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:44,307 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-10 02:51:44,317 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:44,338 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:45,278 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-10 02:51:45,287 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:45,305 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:46,250 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-10 02:51:46,251 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-10 02:51:46,260 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:46,282 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:47,250 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-10 02:51:47,266 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 02:51:47,294 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-07 onwards from mf_nav.
+2025-08-10 02:51:48,236 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-10 02:51:48,252 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:48,277 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:49,281 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-10 02:51:49,281 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-10 02:51:49,318 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-07 onwards from mf_nav.
+2025-08-10 02:51:50,253 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-10 02:51:50,264 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:50,289 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:51,231 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-10 02:51:51,231 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-10 02:51:51,251 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:51,274 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:52,230 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-10 02:51:52,230 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:52,266 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:53,289 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-10 02:51:53,297 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:53,333 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:54,273 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-10 02:51:54,280 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-10 02:51:54,306 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-08 onwards from mf_nav.
+2025-08-10 02:51:55,316 - modules - INFO - Successfully saved 15 new records to 'mf'.
+2025-08-10 02:51:55,336 - modules - INFO - Successfully saved 15 new NAV records to 'mf_nav'.
+2025-08-10 02:51:55,337 - modules - INFO - Starting trend calculation process...
+2025-08-10 02:51:56,247 - modules - INFO - Successfully calculated and saved 31212 new records to 'mf_nav_trends'.
+2025-08-14 00:11:00,889 - __main__ - INFO - Starting data collection process...
+2025-08-14 00:11:00,889 - __main__ - INFO - --- Processing Category: Indexes ---
+2025-08-14 00:11:00,889 - __main__ - INFO - Processing: NIFTY 50 (^NSEI)
+2025-08-14 00:11:00,917 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:00,952 - modules - INFO - Deleted existing data for ^NSEI from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:02,214 - __main__ - INFO - Processing: BANK (^NSEBANK)
+2025-08-14 00:11:02,228 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:02,256 - modules - INFO - Deleted existing data for ^NSEBANK from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:03,327 - __main__ - INFO - Processing: FMCG (^CNXFMCG)
+2025-08-14 00:11:03,349 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:03,361 - modules - INFO - Deleted existing data for ^CNXFMCG from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:04,360 - __main__ - INFO - Processing: PHARMA (^CNXPHARMA)
+2025-08-14 00:11:04,373 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:04,397 - modules - INFO - Deleted existing data for ^CNXPHARMA from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:05,634 - __main__ - INFO - Processing: IT (^CNXIT)
+2025-08-14 00:11:05,648 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:05,659 - modules - INFO - Deleted existing data for ^CNXIT from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:06,825 - __main__ - INFO - Processing: INFRA (^CNXINFRA)
+2025-08-14 00:11:06,844 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:06,860 - modules - INFO - Deleted existing data for ^CNXINFRA from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:08,002 - __main__ - INFO - --- Processing Category: Sector Funds ---
+2025-08-14 00:11:08,002 - __main__ - INFO - Processing: SBI Consumption Opportunities Fund Direct Growth (0P0000XVJX.BO)
+2025-08-14 00:11:08,017 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:08,037 - modules - INFO - Deleted existing data for 0P0000XVJX.BO from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:10,381 - __main__ - INFO - Processing: SBI Healthcare Opportunities Fund Direct Growth (0P0000XVL7.BO)
+2025-08-14 00:11:10,391 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-14 00:11:10,404 - modules - INFO - Deleted existing data for 0P0000XVL7.BO from 2025-08-07 onwards from mf_nav.
+2025-08-14 00:11:11,519 - __main__ - INFO - Processing: SBI Banking & Financial Services Fund Direct Growth (0P00015HLN.BO)
+2025-08-14 00:11:11,520 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:11,545 - modules - INFO - Deleted existing data for 0P00015HLN.BO from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:12,803 - __main__ - INFO - Processing: SBI Technology Opportunities Fund Direct Growth (0P0000XVKP.BO)
+2025-08-14 00:11:12,817 - __main__ - INFO -   Last data: 2025-08-07 00:00:00, fetching from: 2025-08-07
+2025-08-14 00:11:12,840 - modules - INFO - Deleted existing data for 0P0000XVKP.BO from 2025-08-07 onwards from mf_nav.
+2025-08-14 00:11:14,050 - __main__ - INFO - Processing: SBI Infrastructure Fund Direct Growth (0P0000XVJM.BO)
+2025-08-14 00:11:14,060 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:14,076 - modules - INFO - Deleted existing data for 0P0000XVJM.BO from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:15,265 - __main__ - INFO - --- Processing Category: ELSS Funds ---
+2025-08-14 00:11:15,265 - __main__ - INFO - Processing: HDFC ELSS TaxSaver Dir Gr (0P0000XW8Z.BO)
+2025-08-14 00:11:15,276 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:15,297 - modules - INFO - Deleted existing data for 0P0000XW8Z.BO from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:16,531 - __main__ - INFO - Processing: SBI ELSS Tax Saver Dir Gr (0P0000XVL9.BO)
+2025-08-14 00:11:16,540 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:16,559 - modules - INFO - Deleted existing data for 0P0000XVL9.BO from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:17,656 - __main__ - INFO - Processing: Canara Robeco ELSS Tax Saver Dir Gr (0P0000XW04.BO)
+2025-08-14 00:11:17,666 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:17,685 - modules - INFO - Deleted existing data for 0P0000XW04.BO from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:18,625 - __main__ - INFO - Processing: ICICI Pru ELSS Tax Saver Dir Gr (0P0000XUZ4.BO)
+2025-08-14 00:11:18,625 - __main__ - INFO -   Last data: 2025-08-08 00:00:00, fetching from: 2025-08-08
+2025-08-14 00:11:18,656 - modules - INFO - Deleted existing data for 0P0000XUZ4.BO from 2025-08-08 onwards from mf_nav.
+2025-08-14 00:11:20,343 - modules - INFO - Successfully saved 15 new records to 'mf'.
+2025-08-14 00:11:20,352 - modules - INFO - Successfully saved 51 new NAV records to 'mf_nav'.
+2025-08-14 00:11:20,352 - modules - INFO - Starting trend calculation process...
+2025-08-14 00:11:21,497 - modules - INFO - Successfully calculated and saved 31248 new records to 'mf_nav_trends'.

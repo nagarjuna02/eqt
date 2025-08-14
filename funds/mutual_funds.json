@@ -1,0 +1,23 @@
+{
+    "Indexes": {
+        "NIFTY 50": "^NSEI",
+        "BANK": "^NSEBANK",
+        "FMCG": "^CNXFMCG",
+        "PHARMA": "^CNXPHARMA",
+        "IT": "^CNXIT",
+        "INFRA": "^CNXINFRA"
+    },
+    "Sector Funds": {
+        "SBI Consumption Opportunities Fund Direct Growth": "0P0000XVJX.BO",
+        "SBI Healthcare Opportunities Fund Direct Growth": "0P0000XVL7.BO",
+        "SBI Banking & Financial Services Fund Direct Growth": "0P00015HLN.BO",
+        "SBI Technology Opportunities Fund Direct Growth": "0P0000XVKP.BO",
+        "SBI Infrastructure Fund Direct Growth": "0P0000XVJM.BO"
+    },
+    "ELSS Funds": {
+        "HDFC ELSS TaxSaver Dir Gr": "0P0000XW8Z.BO",
+        "SBI ELSS Tax Saver Dir Gr": "0P0000XVL9.BO",
+        "Canara Robeco ELSS Tax Saver Dir Gr": "0P0000XW04.BO",
+        "ICICI Pru ELSS Tax Saver Dir Gr": "0P0000XUZ4.BO"
+    }
+}
