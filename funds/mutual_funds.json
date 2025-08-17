@@ -19,5 +19,26 @@
         "SBI ELSS Tax Saver Dir Gr": "0P0000XVL9.BO",
         "Canara Robeco ELSS Tax Saver Dir Gr": "0P0000XW04.BO",
         "ICICI Pru ELSS Tax Saver Dir Gr": "0P0000XUZ4.BO"
+    },
+    "Thematic Funds": {
+        "SBI Focused Equity Fund Direct Growth": "0P0000XVJT.BO",
+        "SBI Large & MIDCap Fund- Regular Plan -Growth": "0P0000XVL5.BO",
+        "SBI Small Cap Fund - Direct Plan - Growth": "0P0000XW1B.BO",
+        "ICICI Prudential Focused Equity Fund - Direct Plan - Growth": "0P0000XX0F.BO",
+        "ICICI Prudential Large & Mid Cap Fund - Growth": "0P0000XUZ8.BO",
+        "HDFC Focused 30 Fund": "0P0000XW75.BO",
+        "HDFC Large and Mid Cap Fund - Growth Option": "0P0000XVAE.BO",
+        "Canara Robeco Small Cap Dir": "0P0001FKEE.BO",
+        "ICICI Prudential MidCap Fund Direct Plan Growth": "0P00011MAT.BO",
+        "HDFC Small Cap Fund-Direct Growth Option": "0P0000XVAA.BO"
+    },
+    "Debt Funds":{
+        "SBI Long Duration Fund": "0P0001Q7X5.BO"
+    },
+    "ETFs": {
+        "HDFC Nifty 100": "HDFCNIF100.NS",
+        "HDFC Small 250": "HDFCSML250.NS",
+        "Kotak Nifty Equal Weight 100": "NIFTY100EW.NS",
+        "SBI Gold ETF":"SETFGOLD.NS"
     }
 }
