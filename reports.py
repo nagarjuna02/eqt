@@ -229,9 +229,9 @@ def create_returns_tables(df_returns):
     yearly_cols_map = {}
     yearly_cols_map['YTD_Return'] = f'{current_year}(YTD)'
 
-    # Get the last 4 years
+    # Get the last 9 years
     yearly_cols = sorted([col for col in df_returns.columns if col.startswith('Abs_Return_2')], reverse=True)
-    for i, col in enumerate(yearly_cols[:4]):
+    for i, col in enumerate(yearly_cols[:9]):
         # Extract year from column name like 'Abs_Return_2024'
         year = col.split('_')[-1]
         yearly_cols_map[col] = year
