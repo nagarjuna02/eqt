@@ -41,6 +41,24 @@ Force a clean historical reload:
 .\.venv\Scripts\python.exe -m streamlit run eqt_v2\app.py --server.port 8502
 ```
 
+## Daily Data Refresh
+
+Run the daily data refresh as its own NSSM service. It wakes up hourly by default, checks whether the
+configured daily run time has passed, and runs the incremental parquet collector once per date.
+
+```powershell
+nssm install EQT-V2-Data "C:\path\to\EQT\.venv\Scripts\python.exe" "C:\path\to\EQT\eqt_v2\daily_data_service.py"
+nssm set EQT-V2-Data AppDirectory "C:\path\to\EQT\eqt_v2"
+nssm set EQT-V2-Data AppStdout "C:\path\to\EQT\eqt_v2\logs\daily_data_service.out.log"
+nssm set EQT-V2-Data AppStderr "C:\path\to\EQT\eqt_v2\logs\daily_data_service.err.log"
+nssm start EQT-V2-Data
+```
+
+By default the data service checks hourly and runs once daily at 19:00 server time.
+Adjust with `EQT_DATA_RUN_TIME` and `EQT_DATA_CHECK_INTERVAL_MINUTES`.
+The service writes `runtime/daily_data_state.json` after a successful update and checks
+`last_update_date` before running again, so restarts or hourly checks do not duplicate the same day's pull.
+
 ## Monthly Email Report
 
 Copy `eqt_v2\.env.example` to `eqt_v2\.env` on the server and set the SMTP values.
