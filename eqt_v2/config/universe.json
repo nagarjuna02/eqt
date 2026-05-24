@@ -1,0 +1,448 @@
+{
+  "Indexes": {
+    "NIFTY 50": {
+      "ticker": "^NSEI",
+      "asset_type": "Index",
+      "benchmark": "^NSEI",
+      "house": "Benchmark",
+      "theme": "Broad Market"
+    },
+    "NIFTY BANK": {
+      "ticker": "^NSEBANK",
+      "asset_type": "Index",
+      "benchmark": "^NSEBANK",
+      "house": "Benchmark",
+      "theme": "Financials"
+    },
+    "NIFTY FMCG": {
+      "ticker": "^CNXFMCG",
+      "asset_type": "Index",
+      "benchmark": "^CNXFMCG",
+      "house": "Benchmark",
+      "theme": "Consumption"
+    },
+    "NIFTY PHARMA": {
+      "ticker": "^CNXPHARMA",
+      "asset_type": "Index",
+      "benchmark": "^CNXPHARMA",
+      "house": "Benchmark",
+      "theme": "Healthcare"
+    },
+    "NIFTY IT": {
+      "ticker": "^CNXIT",
+      "asset_type": "Index",
+      "benchmark": "^CNXIT",
+      "house": "Benchmark",
+      "theme": "Technology"
+    },
+    "NIFTY INFRA": {
+      "ticker": "^CNXINFRA",
+      "asset_type": "Index",
+      "benchmark": "^CNXINFRA",
+      "house": "Benchmark",
+      "theme": "Infrastructure"
+    }
+  },
+  "Sector Funds": {
+    "SBI Consumption Opportunities Fund Direct Growth": {
+      "ticker": "0P0000XVJX.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^CNXFMCG",
+      "house": "SBI",
+      "theme": "Consumption"
+    },
+    "SBI Healthcare Opportunities Fund Direct Growth": {
+      "ticker": "0P0000XVL7.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^CNXPHARMA",
+      "house": "SBI",
+      "theme": "Healthcare"
+    },
+    "SBI Banking & Financial Services Fund Direct Growth": {
+      "ticker": "0P00015HLN.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEBANK",
+      "house": "SBI",
+      "theme": "Financials"
+    },
+    "SBI Technology Opportunities Fund Direct Growth": {
+      "ticker": "0P0000XVKP.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^CNXIT",
+      "house": "SBI",
+      "theme": "Technology"
+    },
+    "SBI Infrastructure Fund Direct Growth": {
+      "ticker": "0P0000XVJM.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^CNXINFRA",
+      "house": "SBI",
+      "theme": "Infrastructure"
+    }
+  },
+  "ELSS Funds": {
+    "HDFC ELSS TaxSaver Direct Growth": {
+      "ticker": "0P0000XW8Z.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "HDFC",
+      "theme": "ELSS"
+    },
+    "SBI ELSS Tax Saver Direct Growth": {
+      "ticker": "0P0000XVL9.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "SBI",
+      "theme": "ELSS"
+    },
+    "ICICI Pru ELSS Tax Saver Direct Growth": {
+      "ticker": "0P0000XUZ4.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "ICICI",
+      "theme": "ELSS"
+    }
+  },
+  "Thematic Funds": {
+    "SBI Focused Equity Fund Direct Growth": {
+      "ticker": "0P0000XVJT.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "SBI",
+      "theme": "Diversified Equity"
+    },
+    "SBI Large & Mid Cap Fund Growth": {
+      "ticker": "0P0000XVL5.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "SBI",
+      "theme": "Diversified Equity"
+    },
+    "SBI Small Cap Fund Direct Growth": {
+      "ticker": "0P0000XW1B.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "SBI",
+      "theme": "Diversified Equity"
+    },
+    "ICICI Prudential Focused Equity Fund Direct Growth": {
+      "ticker": "0P0000XX0F.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "ICICI",
+      "theme": "Diversified Equity"
+    },
+    "ICICI Prudential Large & Mid Cap Fund Growth": {
+      "ticker": "0P0000XUZ8.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "ICICI",
+      "theme": "Diversified Equity"
+    },
+    "ICICI Prudential MidCap Fund Direct Growth": {
+      "ticker": "0P00011MAT.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "ICICI",
+      "theme": "Diversified Equity"
+    },
+    "HDFC Focused 30 Fund": {
+      "ticker": "0P0000XW75.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "HDFC",
+      "theme": "Diversified Equity"
+    },
+    "HDFC Large and Mid Cap Fund Growth": {
+      "ticker": "0P0000XVAE.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "HDFC",
+      "theme": "Diversified Equity"
+    },
+    "HDFC Small Cap Fund Direct Growth": {
+      "ticker": "0P0000XVAA.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "^NSEI",
+      "house": "HDFC",
+      "theme": "Diversified Equity"
+    }
+  },
+  "Debt Funds": {
+    "HDFC Overnight Fund Direct Growth": {
+      "ticker": "0P0000XW6T.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Liquid Fund Direct Growth": {
+      "ticker": "0P0000XW89.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Money Market Fund Direct Growth": {
+      "ticker": "0P0000XW6V.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Low Duration Fund Direct Growth": {
+      "ticker": "0P0000XW6Y.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Ultra Short Term Fund Direct Growth": {
+      "ticker": "0P0001ENC7.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Short Term Debt Fund Growth": {
+      "ticker": "0P0000OQWT.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Corporate Bond Fund Direct Growth": {
+      "ticker": "0P0000XW8D.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Banking & PSU Debt Fund Direct Growth": {
+      "ticker": "0P00012KBM.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Gilt Fund Direct Growth": {
+      "ticker": "0P0000XW7F.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Dynamic Debt Fund Direct Growth": {
+      "ticker": "0P0000XW7L.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Credit Risk Debt Fund Direct Growth": {
+      "ticker": "0P00012K1G.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "HDFC Floating Rate Debt Fund Direct Growth": {
+      "ticker": "0P0000XW7B.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "HDFC",
+      "theme": "Debt"
+    },
+    "SBI Overnight Fund Direct Growth": {
+      "ticker": "0P0000XVKI.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "SBI Liquid Fund Direct Growth": {
+      "ticker": "0P0000XVL8.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "SBI Savings Fund Direct Growth": {
+      "ticker": "0P0000XVKF.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "SBI Low Duration Fund Direct Growth": {
+      "ticker": "0P0000XVLN.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "SBI Short Term Debt Fund Direct Growth": {
+      "ticker": "0P0000XVLL.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "SBI Corporate Bond Fund Direct Growth": {
+      "ticker": "0P0001FGGV.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "SBI Banking & PSU Fund Direct Growth": {
+      "ticker": "0P0000XW1F.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "SBI Gilt Fund Direct Growth": {
+      "ticker": "0P0000XVK2.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "SBI Dynamic Bond Fund Direct Growth": {
+      "ticker": "0P0000XVJG.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "SBI Credit Risk Fund Direct Growth": {
+      "ticker": "0P0000XVKE.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "SBI Long Duration Fund": {
+      "ticker": "0P0001Q7X5.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "SBI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Liquid Fund Direct Growth": {
+      "ticker": "0P0000XUYC.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Money Market Fund Direct Growth": {
+      "ticker": "0P0000XUYQ.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Savings Fund Direct Growth": {
+      "ticker": "0P0000XWAO.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Ultra Short Term Fund Direct Growth": {
+      "ticker": "0P0000XWCA.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Short Term Fund Direct Growth": {
+      "ticker": "0P0000XUYZ.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Corporate Bond Fund Direct Growth": {
+      "ticker": "0P0000XUZE.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Banking & PSU Debt Fund Direct Growth": {
+      "ticker": "0P0000YF56.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Gilt Fund Direct Growth": {
+      "ticker": "0P0000XUXV.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential All Seasons Bond Fund Direct Growth": {
+      "ticker": "0P0000XUYA.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Medium Term Bond Fund Direct Growth": {
+      "ticker": "0P0000XYOB.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Long Term Bond Fund Direct Growth": {
+      "ticker": "0P0000XUXZ.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Credit Risk Fund Direct Growth": {
+      "ticker": "0P0000XUYV.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    },
+    "ICICI Prudential Floating Interest Fund Direct Growth": {
+      "ticker": "0P0000XUXS.BO",
+      "asset_type": "Mutual Fund",
+      "benchmark": "Debt Composite",
+      "house": "ICICI",
+      "theme": "Debt"
+    }
+  },
+  "ETFs": {
+    "HDFC Nifty 100 ETF": {
+      "ticker": "HDFCNIF100.NS",
+      "asset_type": "ETF",
+      "benchmark": "^NSEI",
+      "house": "HDFC",
+      "theme": "Broad Market"
+    },
+    "HDFC Smallcap 250 ETF": {
+      "ticker": "HDFCSML250.NS",
+      "asset_type": "ETF",
+      "benchmark": "^NSEI",
+      "house": "HDFC",
+      "theme": "Diversified Equity"
+    },
+    "SBI Gold ETF": {
+      "ticker": "SETFGOLD.NS",
+      "asset_type": "ETF",
+      "benchmark": "^NSEI",
+      "house": "SBI",
+      "theme": "Gold"
+    }
+  }
+}

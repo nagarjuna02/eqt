@@ -1,20 +1,29 @@
 # modules.py
 import os
+import re
 import sqlite3
 import pandas as pd
 import yfinance as yf
 from typing import Dict, Any, Optional
 import logging
-from datetime import datetime, timedelta, time
+from datetime import datetime, timedelta
 
 # Configure logging
 logger = logging.getLogger(__name__)
+
+_SQL_IDENTIFIER_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 
 # --- Database Operations Section ---------------------------------------------
 
 def get_db_connection(db_path: str) -> sqlite3.Connection:
     """Establishes a connection to the SQLite database."""
     return sqlite3.connect(db_path)
+
+def quote_identifier(identifier: str) -> str:
+    """Safely quotes a SQLite identifier that comes from configuration."""
+    if not _SQL_IDENTIFIER_RE.fullmatch(identifier):
+        raise ValueError(f"Invalid SQLite identifier: {identifier!r}")
+    return f'"{identifier}"'
 
 def get_last_date_for_fund(ticker: str, db_path: str, table_name: str) -> Optional[str]:
     """
@@ -24,7 +33,7 @@ def get_last_date_for_fund(ticker: str, db_path: str, table_name: str) -> Option
     try:
         with get_db_connection(db_path) as conn:
             cursor = conn.cursor()
-            cursor.execute(f"SELECT MAX(Date) FROM {table_name} WHERE Ticker = ?", (ticker,))
+            cursor.execute(f"SELECT MAX(Date) FROM {quote_identifier(table_name)} WHERE Ticker = ?", (ticker,))
             result = cursor.fetchone()
             return result[0] if result and result[0] else None
     except sqlite3.Error as e:
@@ -38,7 +47,10 @@ def delete_records_from_date(ticker: str, start_date: str, db_path: str, table_n
     try:
         with get_db_connection(db_path) as conn:
             cursor = conn.cursor()
-            cursor.execute(f"DELETE FROM {table_name} WHERE Ticker = ? AND Date >= ?", (ticker, start_date))
+            cursor.execute(
+                f"DELETE FROM {quote_identifier(table_name)} WHERE Ticker = ? AND Date >= ?",
+                (ticker, start_date),
+            )
             conn.commit()
             logger.info(f"Deleted existing data for {ticker} from {start_date} onwards from {table_name}.")
     except sqlite3.Error as e:
@@ -49,6 +61,7 @@ def delete_records_from_date(ticker: str, start_date: str, db_path: str, table_n
 def save_master_data_to_db(df: pd.DataFrame, db_path: str, table_name: str) -> None:
     """Saves a DataFrame of master fund data to the specified SQLite table."""
     try:
+        quote_identifier(table_name)
         with get_db_connection(db_path) as conn:
             # Using 'replace' to ensure only the latest master data is kept for a ticker
             df.to_sql(table_name, conn, if_exists='replace', index=False)
@@ -61,6 +74,7 @@ def save_master_data_to_db(df: pd.DataFrame, db_path: str, table_name: str) -> N
 def save_nav_data_to_db(df: pd.DataFrame, db_path: str, table_name: str) -> None:
     """Saves a DataFrame of NAV data to the specified SQLite table."""
     try:
+        quote_identifier(table_name)
         with get_db_connection(db_path) as conn:
             # Using 'append' for time-series data
             df.to_sql(table_name, conn, if_exists='append', index=False)
@@ -150,8 +164,14 @@ def calculate_and_save_trends(db_path: str, nav_table: str, master_table: str, t
     try:
         with get_db_connection(db_path) as conn:
             # Read all data from the source table, using 'Close'
-            df_nav = pd.read_sql_query(f"SELECT Ticker, Date, Close FROM {nav_table}", conn)
-            df_master = pd.read_sql_query(f"SELECT Ticker, Fund_Name, Category FROM {master_table}", conn)
+            df_nav = pd.read_sql_query(
+                f"SELECT Ticker, Date, Close FROM {quote_identifier(nav_table)}",
+                conn,
+            )
+            df_master = pd.read_sql_query(
+                f"SELECT Ticker, Fund_Name, Category FROM {quote_identifier(master_table)}",
+                conn,
+            )
             
             if df_nav.empty:
                 logger.warning(f"No NAV data found in {nav_table} to calculate trends.")
@@ -223,6 +243,7 @@ def calculate_and_save_trends(db_path: str, nav_table: str, master_table: str, t
             
             # Save the calculated trends to the new table, replacing any old data
             trends_to_save = trends_df.dropna(subset=['Rolling_3M_Avg'])
+            quote_identifier(trends_table)
             trends_to_save.to_sql(trends_table, conn, if_exists='replace', index=False)
             logger.info(f"Successfully calculated and saved {len(trends_to_save)} new records to '{trends_table}'.")
 
@@ -234,120 +255,128 @@ def calculate_and_store_returns(db_path: str, trends_table: str, returns_table: 
     based on a 3-month rolling average, and stores them in a new table.
     """
     if not os.path.exists(db_path):
-        print(f"Database file not found at {db_path}.")
+        logger.error(f"Database file not found at {db_path}.")
         return
 
     try:
-        conn = sqlite3.connect(db_path)
-        print("Connected to the database.")
+        quote_identifier(returns_table)
+        with get_db_connection(db_path) as conn:
+            logger.info("Connected to the database.")
 
-        # Load the data, including the pre-calculated Rolling_3M_Avg
-        query = "SELECT Ticker, Fund_Name, Category, Date, Close, Rolling_3M_Avg FROM mf_nav_trends"
-        df = pd.read_sql(query, conn)
+            # Load the data, including the pre-calculated Rolling_3M_Avg
+            query = (
+                "SELECT Ticker, Fund_Name, Category, Date, Close, Rolling_3M_Avg "
+                f"FROM {quote_identifier(trends_table)}"
+            )
+            df = pd.read_sql(query, conn)
 
-        # Pre-process the data
-        df['Date'] = pd.to_datetime(df['Date'])
-        
-        # Drop rows where rolling average is NaN (not enough data)
-        df.dropna(subset=['Rolling_3M_Avg'], inplace=True)
-        
-        # Get the latest date in the dataset
-        latest_date = df['Date'].max()
+            # Pre-process the data
+            df['Date'] = pd.to_datetime(df['Date'])
 
-        # Define a function to calculate absolute return between two dates
-        def get_absolute_return(start_date, end_date, ticker_data):
-            try:
-                # Find the value closest to the start date
-                start_value = ticker_data[ticker_data['Date'] >= start_date]['Rolling_3M_Avg'].iloc[0]
-                
-                # Find the value closest to the end date
-                end_value = ticker_data[ticker_data['Date'] <= end_date]['Rolling_3M_Avg'].iloc[-1]
-                
-                return ((end_value - start_value) / start_value) * 100 if start_value != 0 else 0
-            except IndexError:
-                return None
+            # Drop rows where rolling average is NaN (not enough data)
+            df.dropna(subset=['Rolling_3M_Avg'], inplace=True)
+            if df.empty:
+                logger.warning(f"No trend data found in {trends_table} to calculate returns.")
+                return
 
-        # Prepare a list to store the final returns data
-        returns_data = []
+            # Get the latest date in the dataset
+            latest_date = df['Date'].max()
 
-        # Get unique tickers, fund names, and categories
-        fund_info = df[['Ticker', 'Fund_Name', 'Category']].drop_duplicates()
+            # Define a function to calculate absolute return between two dates
+            def get_absolute_return(start_date, end_date, ticker_data):
+                try:
+                    # Find the value closest to the start date
+                    start_value = ticker_data[ticker_data['Date'] >= start_date]['Rolling_3M_Avg'].iloc[0]
 
-        print("Calculating yearly, quarterly, and YTD returns...")
-        
-        # Loop through each fund to calculate returns
-        for index, row in fund_info.iterrows():
-            ticker = row['Ticker']
-            fund_name = row['Fund_Name']
-            category = row['Category']
-            ticker_df = df[df['Ticker'] == ticker].sort_values('Date').copy()
+                    # Find the value closest to the end date
+                    end_value = ticker_data[ticker_data['Date'] <= end_date]['Rolling_3M_Avg'].iloc[-1]
 
-            # Initialize a dictionary for the current fund's returns
-            fund_returns = {'Ticker': ticker, 'Fund_Name': fund_name, 'Category': category}
+                    return ((end_value - start_value) / start_value) * 100 if start_value != 0 else 0
+                except IndexError:
+                    return None
 
-            # --- Calculate Yearly Returns (last 10 years) ---
-            for year_offset in range(0, 11): # Loop from last 10 years to current
-                target_year = latest_date.year - year_offset
-                if target_year >= 2015:  # Start from 2015 as requested
-                    start_of_year = datetime(target_year, 1, 1)
-                    end_of_year = datetime(target_year, 12, 31)
+            # Prepare a list to store the final returns data
+            returns_data = []
 
-                    # For the current year, the end date is the latest date
-                    end_date = latest_date if target_year == latest_date.year else end_of_year
+            # Get unique tickers, fund names, and categories
+            fund_info = df[['Ticker', 'Fund_Name', 'Category']].drop_duplicates()
+
+            logger.info("Calculating yearly, quarterly, and YTD returns...")
+
+            # Loop through each fund to calculate returns
+            for index, row in fund_info.iterrows():
+                ticker = row['Ticker']
+                fund_name = row['Fund_Name']
+                category = row['Category']
+                ticker_df = df[df['Ticker'] == ticker].sort_values('Date').copy()
+
+                # Initialize a dictionary for the current fund's returns
+                fund_returns = {'Ticker': ticker, 'Fund_Name': fund_name, 'Category': category}
+
+                # --- Calculate Yearly Returns (last 10 years) ---
+                for year_offset in range(0, 11): # Loop from last 10 years to current
+                    target_year = latest_date.year - year_offset
+                    if target_year >= 2015:  # Start from 2015 as requested
+                        start_of_year = datetime(target_year, 1, 1)
+                        end_of_year = datetime(target_year, 12, 31)
+
+                        # For the current year, the end date is the latest date
+                        end_date = latest_date if target_year == latest_date.year else end_of_year
+
+                        return_val = get_absolute_return(start_of_year, end_date, ticker_df)
+                        if return_val is not None:
+                            if target_year == latest_date.year:
+                                fund_returns['YTD_Return'] = return_val
+                            else:
+                                fund_returns[f'Abs_Return_{target_year}'] = return_val
+
+                # --- Calculate Quarterly Returns ---
+                # Get latest quarter's start and end dates
+                current_quarter = (latest_date.month - 1) // 3 + 1
+                current_quarter_start = datetime(latest_date.year, (current_quarter - 1) * 3 + 1, 1)
+
+                # QTD Return
+                fund_returns['QTD_Return'] = get_absolute_return(current_quarter_start, latest_date, ticker_df)
+
+                # Last 4 Quarters Returns
+                for i in range(4):
+                    end_quarter_date = latest_date - pd.DateOffset(months=3 * i)
+                    start_quarter_date = end_quarter_date - pd.DateOffset(months=3)
                     
-                    return_val = get_absolute_return(start_of_year, end_date, ticker_df)
-                    if return_val is not None:
-                        if target_year == latest_date.year:
-                            fund_returns['YTD_Return'] = return_val
-                        else:
-                            fund_returns[f'Abs_Return_{target_year}'] = return_val
-
-            # --- Calculate Quarterly Returns ---
-            # Get latest quarter's start and end dates
-            current_quarter = (latest_date.month - 1) // 3 + 1
-            current_quarter_start = datetime(latest_date.year, (current_quarter - 1) * 3 + 1, 1)
-
-            # QTD Return
-            fund_returns['QTD_Return'] = get_absolute_return(current_quarter_start, latest_date, ticker_df)
-
-            # Last 4 Quarters Returns
-            for i in range(4):
-                end_quarter_date = latest_date - pd.DateOffset(months=3 * i)
-                start_quarter_date = end_quarter_date - pd.DateOffset(months=3)
+                    quarter_return_val = get_absolute_return(start_quarter_date, end_quarter_date, ticker_df)
+                    if quarter_return_val is not None:
+                        quarter_label = f"Q{ (end_quarter_date.month - 1) // 3 + 1}_{end_quarter_date.year}"
+                        fund_returns[f'Abs_Return_{quarter_label}'] = quarter_return_val
                 
-                quarter_return_val = get_absolute_return(start_quarter_date, end_quarter_date, ticker_df)
-                if quarter_return_val is not None:
-                    quarter_label = f"Q{ (end_quarter_date.month - 1) // 3 + 1}_{end_quarter_date.year}"
-                    fund_returns[f'Abs_Return_{quarter_label}'] = quarter_return_val
+                returns_data.append(fund_returns)
+
+            # Convert the results to a DataFrame
+            returns_df = pd.DataFrame(returns_data)
             
-            returns_data.append(fund_returns)
+            # Reorder columns for readability
+            returns_df_columns = ['Ticker', 'Fund_Name', 'Category'] + sorted([col for col in returns_df.columns if col not in ['Ticker', 'Fund_Name', 'Category']])
+            returns_df = returns_df[returns_df_columns]
 
-        # Convert the results to a DataFrame
-        returns_df = pd.DataFrame(returns_data)
-        
-        # Reorder columns for readability
-        returns_df_columns = ['Ticker', 'Fund_Name', 'Category'] + sorted([col for col in returns_df.columns if col not in ['Ticker', 'Fund_Name', 'Category']])
-        returns_df = returns_df[returns_df_columns]
-
-        # Write the new DataFrame to a SQLite table, overwriting if it exists
-        print("Saving calculated returns to 'mf_nav_returns' table...")
-        returns_df.to_sql('mf_nav_returns', conn, if_exists='replace', index=False)
-        print("Data successfully saved to 'mf_nav_returns'.")
-        
-        conn.close()
+            # Write the new DataFrame to a SQLite table, overwriting if it exists
+            logger.info(f"Saving calculated returns to '{returns_table}' table...")
+            returns_df.to_sql(returns_table, conn, if_exists='replace', index=False)
+            logger.info(f"Data successfully saved to '{returns_table}'.")
 
     except sqlite3.Error as e:
-        print(f"Database error: {e}")
+        logger.error(f"Database error: {e}")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        logger.error(f"An unexpected error occurred: {e}")
+
+def vacuum_db(db_path: str) -> None:
+    try:
+        with sqlite3.connect(db_path) as conn:
+            conn.execute('VACUUM;')
+        logger.info(f"Database at {db_path} has been vacuumed successfully.")
+    except sqlite3.Error as e:
+        logger.error(f"Database error: {e}")
+    except Exception as e:
+        logger.error(f"An unexpected error occurred: {e}")
 
 def vaccum_db(db_path: str) -> None:
-    try:
-        conn = sqlite3.connect(db_path)
-        conn.execute('VACUUM;')
-        conn.close()
-        print(f"Database at {db_path} has been vacuumed successfully.")
-    except sqlite3.Error as e:
-        print(f"Database error: {e}")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+    """Backward-compatible alias for the previous misspelled function name."""
+    vacuum_db(db_path)

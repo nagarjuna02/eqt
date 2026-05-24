@@ -16,7 +16,7 @@ from modules import (
     delete_records_from_date,
     calculate_and_save_trends,
     calculate_and_store_returns,
-    vaccum_db
+    vacuum_db
 )
 
 # Load environment variables from .env file
@@ -38,7 +38,7 @@ class FundCollector:
         self.returns_table_name: str = os.getenv("RETURNS_TABLE_NAME", "mf_nav_returns") # Added new table name
         self.log_path: str = os.getenv("LOG_PATH", "logs/app.log")
         # Correcting the file path based on user input
-        self.funds_file_path: str = os.getenv("FUNDS_FILE_PATH", "mutual_funds.json")
+        self.funds_file_path: str = os.getenv("FUNDS_FILE_PATH", "funds/mutual_funds.json")
 
         # Derived configurations
         self.start_date: str = self._get_full_history_start_date()
@@ -98,27 +98,8 @@ class FundCollector:
             self.logger.info(f"--- Processing Category: {category} ---")
             for fund_name, ticker in funds_dict.items():
                 self.logger.info(f"Processing: {fund_name} ({ticker})")
-                
-                # We now check against the new NAV table
-                last_date = get_last_date_for_fund(ticker, self.db_path, self.nav_table_name)
-                
-                if last_date:
-                    fetch_start_date = pd.to_datetime(last_date).strftime("%Y-%m-%d")
-                    if fetch_start_date >= self.end_date:
-                        self.logger.info("  Data is up to date, skipping.")
-                        continue
-                    
-                    self.logger.info(f"  Last data: {last_date}, fetching from: {fetch_start_date}")
-                    # Delete data from the last recorded date onwards to prepare for fresh data
-                    delete_records_from_date(ticker, fetch_start_date, self.db_path, self.nav_table_name)
-                else:
-                    fetch_start_date = self.start_date
-                    self.logger.info(f"  No existing data, fetching full history from: {fetch_start_date}")
 
                 fund_info = get_fund_info(ticker)
-                price_data = get_price_data(ticker, fetch_start_date, self.end_date)
-                
-                # Prepare and append the master data
                 master_data = {
                     'Fund_Name': [fund_name],
                     'Ticker': [ticker],
@@ -127,6 +108,24 @@ class FundCollector:
                 }
                 master_df = pd.DataFrame(master_data)
                 all_master_data_to_save.append(master_df)
+
+                # We now check against the new NAV table
+                last_date = get_last_date_for_fund(ticker, self.db_path, self.nav_table_name)
+
+                if last_date:
+                    fetch_start_date = pd.to_datetime(last_date).strftime("%Y-%m-%d")
+                    if fetch_start_date >= self.end_date:
+                        self.logger.info("  Data is up to date, skipping.")
+                        continue
+
+                    self.logger.info(f"  Last data: {last_date}, fetching from: {fetch_start_date}")
+                    # Delete data from the last recorded date onwards to prepare for fresh data
+                    delete_records_from_date(ticker, fetch_start_date, self.db_path, self.nav_table_name)
+                else:
+                    fetch_start_date = self.start_date
+                    self.logger.info(f"  No existing data, fetching full history from: {fetch_start_date}")
+
+                price_data = get_price_data(ticker, fetch_start_date, self.end_date)
 
                 if not price_data.empty:
                     # Prepare and append the NAV data
@@ -173,7 +172,7 @@ if __name__ == '__main__':
         returns_table=collector.returns_table_name
     )
     # Vacuum the database
-    vaccum_db(db_path=collector.db_path)
+    vacuum_db(db_path=collector.db_path)
 
 
 

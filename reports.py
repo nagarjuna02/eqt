@@ -4,25 +4,37 @@ import streamlit as st
 import datetime as dt
 import sqlite3
 import os
+import re
+from dotenv import load_dotenv
+
+load_dotenv()
+
+DB_PATH = os.getenv("DB_PATH", "db/eqt.db")
+TRENDS_TABLE_NAME = os.getenv("TRENDS_TABLE_NAME", "mf_nav_trends")
+RETURNS_TABLE_NAME = os.getenv("RETURNS_TABLE_NAME", "mf_nav_returns")
+
+_SQL_IDENTIFIER_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+
+def quote_identifier(identifier: str) -> str:
+    if not _SQL_IDENTIFIER_RE.fullmatch(identifier):
+        raise ValueError(f"Invalid SQLite identifier: {identifier!r}")
+    return f'"{identifier}"'
 
 # --- Database Connection and Data Loading ---
 @st.cache_data
-def load_trends_data():
+def load_trends_data(db_mtime: float):
     """
     Connects to the SQLite database and loads mutual fund trend data from
     the 'mf_nav_trends' table into a DataFrame.
     """
-    db_path = "db/eqt.db" # The same path used in main.py
-    if not os.path.exists(db_path):
-        st.error(f"Database file not found at {db_path}. Please run main.py first.")
+    if not os.path.exists(DB_PATH):
+        st.error(f"Database file not found at {DB_PATH}. Please run main.py first.")
         return pd.DataFrame()
 
     try:
-        conn = sqlite3.connect(db_path)
-        # Execute a query to get all data from the mf_nav_trends table
-        query = "SELECT * FROM mf_nav_trends"
-        df = pd.read_sql(query, conn)
-        conn.close()
+        with sqlite3.connect(DB_PATH) as conn:
+            query = f"SELECT * FROM {quote_identifier(TRENDS_TABLE_NAME)}"
+            df = pd.read_sql(query, conn)
         
         # Pre-process the data as before
         df['Date'] = pd.to_datetime(df['Date']).dt.date
@@ -36,21 +48,19 @@ def load_trends_data():
 
 
 @st.cache_data
-def load_returns_data():
+def load_returns_data(db_mtime: float):
     """
     Connects to the SQLite database and loads calculated returns data from
     the 'mf_nav_returns' table into a DataFrame.
     """
-    db_path = "db/eqt.db"
-    if not os.path.exists(db_path):
-        st.error(f"Database file not found at {db_path}. Please run main.py first.")
+    if not os.path.exists(DB_PATH):
+        st.error(f"Database file not found at {DB_PATH}. Please run main.py first.")
         return pd.DataFrame()
     
     try:
-        conn = sqlite3.connect(db_path)
-        query = "SELECT * FROM mf_nav_returns"
-        df = pd.read_sql(query, conn)
-        conn.close()
+        with sqlite3.connect(DB_PATH) as conn:
+            query = f"SELECT * FROM {quote_identifier(RETURNS_TABLE_NAME)}"
+            df = pd.read_sql(query, conn)
         return df
     except sqlite3.Error as e:
         st.error(f"Database error: {e}")
@@ -63,8 +73,9 @@ def load_returns_data():
 st.set_page_config(layout="wide")
 
 # Load data from the new database function
-df_trends = load_trends_data()
-df_returns = load_returns_data()
+db_mtime = os.path.getmtime(DB_PATH) if os.path.exists(DB_PATH) else 0
+df_trends = load_trends_data(db_mtime)
+df_returns = load_returns_data(db_mtime)
 
 # Exit early if data loading failed
 if df_trends.empty or df_returns.empty:
@@ -242,7 +253,7 @@ def create_returns_tables(df_returns):
     final_cols = ['Fund_Name', 'Category'] + list(quarterly_cols_map.values()) + list(yearly_cols_map.values())
     
     # Select the final DataFrame
-    return df_returns[final_cols]
+    return df_returns[[col for col in final_cols if col in df_returns.columns]]
 
 # Generate the single combined returns table from the filtered data
 combined_returns_df = create_returns_tables(df_returns_filtered)
@@ -293,4 +304,4 @@ with tab3:
     st.markdown("### Returns Report")
     st.markdown("#### Combined Returns")
     # Apply the styling function before displaying the dataframe
-    st.dataframe(combined_returns_df.style.applymap(highlight_negative), use_container_width=True)
+    st.dataframe(combined_returns_df.style.map(highlight_negative), use_container_width=True)
