@@ -138,7 +138,7 @@ summary_cols = st.columns(6)
 summary_cols[0].metric("Latest data", str(latest_date))
 summary_cols[1].metric("Tracked", f"{metrics['Ticker'].nunique()} tickers")
 summary_cols[2].metric("Investable", f"{metrics[metrics['Asset_Type'].isin(['Mutual Fund', 'ETF'])]['Ticker'].nunique()}")
-summary_cols[3].metric("Nifty 50 PE", f"{nifty_pe:.1f}" if nifty_pe is not None else "N/A", f"Mult: {multiplier:.2f}x" if nifty_pe is not None else "")
+summary_cols[3].metric("Nifty 50 PE (Proxy)", f"{nifty_pe:.1f}" if nifty_pe is not None else "N/A", f"Mult: {multiplier:.2f}x" if nifty_pe is not None else "", help="Sourced programmatically using NIFTYBEES.NS ETF trailing PE as a proxy for the Nifty 50 index valuation.")
 summary_cols[4].metric("Top score", score_fmt(top_candidates["Buy_Low_Score"].max()))
 summary_cols[5].metric("Oldest update", str(oldest_latest))
 

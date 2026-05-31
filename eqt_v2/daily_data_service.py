@@ -109,6 +109,7 @@ def run_sentinel_check(state: dict) -> None:
 
     sent_alerts = state.setdefault("sent_alerts", {})
     alert_messages = []
+    new_alerts = {}
 
     for _, row in investable.iterrows():
         ticker = row["Ticker"]
@@ -121,7 +122,7 @@ def run_sentinel_check(state: dict) -> None:
                 if ticker not in sent_alerts:
                     drawdown_str = f"{drawdown:.1f}%" if drawdown is not None and pd.notna(drawdown) else "N/A"
                     alert_messages.append(f"- {name} ({ticker}) has entered Deep Value Watch. Score: {score:.1f}. Drawdown: {drawdown_str}.")
-                    sent_alerts[ticker] = datetime.now().date().isoformat()
+                    new_alerts[ticker] = datetime.now().date().isoformat()
             else:
                 if ticker in sent_alerts:
                     sent_alerts.pop(ticker)
@@ -132,6 +133,7 @@ def run_sentinel_check(state: dict) -> None:
         try:
             send_alert_email(subject, body)
             logger.info("Sent priority alert email for %d assets.", len(alert_messages))
+            sent_alerts.update(new_alerts)
         except Exception as exc:
             logger.exception("Failed to send priority alert email: %s", exc)
 
