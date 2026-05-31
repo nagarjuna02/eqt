@@ -302,7 +302,7 @@ def _build_html_report(
 <html>
 <head>
   <meta charset="utf-8">
-  <title>EQT V2 Monthly Report</title>
+  <title>Silver-Bullet Monthly Report</title>
   <style>
     body {{ font-family: Arial, sans-serif; color: #1f2937; margin: 28px; }}
     h1 {{ margin-bottom: 4px; }}
@@ -315,7 +315,7 @@ def _build_html_report(
   </style>
 </head>
 <body>
-  <h1>EQT V2 Monthly Report</h1>
+  <h1>Silver-Bullet Monthly Report</h1>
   <p class="muted">Generated {datetime.now():%Y-%m-%d %H:%M}. Latest market data: {latest_date}.</p>
   {app_link}
   <p>CSV snapshot: {csv_path.name}</p>
@@ -356,7 +356,7 @@ def _email_body(metrics: pd.DataFrame, chart_paths: list[Path]) -> str:
     
     return f"""<html>
 <body style="font-family:Arial,sans-serif;color:#1f2937;">
-  <h2>EQT V2 Monthly Report</h2>
+  <h2>Silver-Bullet Monthly Report</h2>
   <p>Latest market data: <b>{latest_date}</b></p>
   {app_link}
   
@@ -382,6 +382,8 @@ def send_email(report_path: Path, csv_path: Path, chart_paths: list[Path], metri
     password = os.getenv("EQT_EMAIL_PASSWORD", "")
     sender = os.getenv("EQT_EMAIL_FROM", username).strip()
     recipients = _split_recipients(os.getenv("EQT_EMAIL_TO", ""))
+    cc_val = os.getenv("EQT_EMAIL_CC", "").strip()
+    cc_recipients = _split_recipients(cc_val) if cc_val else []
     use_tls = os.getenv("EQT_EMAIL_USE_TLS", "true").lower() in {"1", "true", "yes", "y"}
 
     missing = [
@@ -398,13 +400,15 @@ def send_email(report_path: Path, csv_path: Path, chart_paths: list[Path], metri
     if missing:
         raise RuntimeError(f"Missing email configuration: {', '.join(missing)}")
 
-    subject_prefix = os.getenv("EQT_EMAIL_SUBJECT_PREFIX", "EQT V2").strip()
+    subject_prefix = os.getenv("EQT_EMAIL_SUBJECT_PREFIX", "Silver-Bullet").strip()
     subject = f"{subject_prefix} Monthly Report - {date.today():%B %Y}"
     message = EmailMessage()
     message["Subject"] = subject
     message["From"] = sender
     message["To"] = ", ".join(recipients)
-    message.set_content("EQT V2 monthly report is attached.")
+    if cc_recipients:
+        message["Cc"] = ", ".join(cc_recipients)
+    message.set_content("Silver-Bullet monthly report is attached.")
     message.add_alternative(_email_body(metrics, chart_paths), subtype="html")
     html_part = message.get_payload()[1]
 
@@ -425,8 +429,9 @@ def send_email(report_path: Path, csv_path: Path, chart_paths: list[Path], metri
             filename=attachment.name,
         )
 
-    with smtplib.SMTP(host, port, timeout=60) as smtp:
-        if use_tls:
+    smtp_cls = smtplib.SMTP_SSL if port == 465 else smtplib.SMTP
+    with smtp_cls(host, port, timeout=60) as smtp:
+        if port != 465 and use_tls:
             smtp.starttls()
         if username:
             smtp.login(username, password)

@@ -82,7 +82,7 @@ def run_once_if_due() -> bool:
 def main() -> None:
     load_dotenv(APP_DIR / ".env")
     interval_minutes = int(os.getenv("EQT_EMAIL_CHECK_INTERVAL_MINUTES", "60"))
-    logger.info("Starting EQT V2 monthly email service. check_interval_minutes=%s", interval_minutes)
+    logger.info("Starting Silver-Bullet monthly email service. check_interval_minutes=%s", interval_minutes)
     while True:
         try:
             sent = run_once_if_due()

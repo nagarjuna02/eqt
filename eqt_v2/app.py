@@ -23,7 +23,7 @@ from analytics import (
 from collector import update_store
 
 
-st.set_page_config(page_title="EQT V2", layout="wide")
+st.set_page_config(page_title="Silver-Bullet", layout="wide")
 
 
 def _mtime(path) -> float:
@@ -132,7 +132,7 @@ if not fundamentals.empty and "Nifty_PE" in fundamentals.columns:
         else:
             multiplier = 1.2 - 0.05 * (nifty_pe - 18)
 
-st.title("EQT V2")
+st.title("Silver-Bullet")
 
 summary_cols = st.columns(6)
 summary_cols[0].metric("Latest data", str(latest_date))

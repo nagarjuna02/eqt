@@ -70,6 +70,8 @@ def send_alert_email(subject: str, body: str) -> None:
     password = os.getenv("EQT_EMAIL_PASSWORD", "")
     sender = os.getenv("EQT_EMAIL_FROM", username).strip()
     recipients = [part.strip() for part in os.getenv("EQT_EMAIL_TO", "").replace(";", ",").split(",") if part.strip()]
+    cc_val = os.getenv("EQT_EMAIL_CC", "").strip()
+    cc_recipients = [part.strip() for part in cc_val.replace(";", ",").split(",") if part.strip()] if cc_val else []
     use_tls = os.getenv("EQT_EMAIL_USE_TLS", "true").lower() in {"1", "true", "yes", "y"}
 
     if not host or not sender or not recipients:
@@ -80,6 +82,8 @@ def send_alert_email(subject: str, body: str) -> None:
     msg["Subject"] = subject
     msg["From"] = sender
     msg["To"] = ", ".join(recipients)
+    if cc_recipients:
+        msg["Cc"] = ", ".join(cc_recipients)
     msg.set_content(body)
 
     smtp_cls = smtplib.SMTP_SSL if port == 465 else smtplib.SMTP
@@ -123,7 +127,7 @@ def run_sentinel_check(state: dict) -> None:
                     sent_alerts.pop(ticker)
 
     if alert_messages:
-        subject = f"[PRIORITY ALERT] EQT V2 - Deep Value Entry Detected"
+        subject = f"[PRIORITY ALERT] Silver-Bullet - Deep Value Entry Detected"
         body = "The daily data refresh has detected assets entering the Deep Value Watch zone (Buy Low Score >= 80):\n\n" + "\n".join(alert_messages) + "\n\nThis is a priority notification based on your custom investment criteria."
         try:
             send_alert_email(subject, body)
@@ -158,7 +162,7 @@ def run_once_if_due() -> bool:
 def main() -> None:
     load_dotenv(APP_DIR / ".env")
     interval_minutes = int(os.getenv("EQT_DATA_CHECK_INTERVAL_MINUTES", "60"))
-    logger.info("Starting EQT V2 daily data service. check_interval_minutes=%s", interval_minutes)
+    logger.info("Starting Silver-Bullet daily data service. check_interval_minutes=%s", interval_minutes)
     while True:
         try:
             updated = run_once_if_due()
