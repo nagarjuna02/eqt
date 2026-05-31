@@ -41,6 +41,13 @@
       "benchmark": "^CNXINFRA",
       "house": "Benchmark",
       "theme": "Infrastructure"
+    },
+    "Debt Composite": {
+      "ticker": "LIQUIDBEES.NS",
+      "asset_type": "Index",
+      "benchmark": "LIQUIDBEES.NS",
+      "house": "Benchmark",
+      "theme": "Debt"
     }
   },
   "Sector Funds": {
@@ -172,252 +179,252 @@
     "HDFC Overnight Fund Direct Growth": {
       "ticker": "0P0000XW6T.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Liquid Fund Direct Growth": {
       "ticker": "0P0000XW89.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Money Market Fund Direct Growth": {
       "ticker": "0P0000XW6V.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Low Duration Fund Direct Growth": {
       "ticker": "0P0000XW6Y.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Ultra Short Term Fund Direct Growth": {
       "ticker": "0P0001ENC7.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Short Term Debt Fund Growth": {
       "ticker": "0P0000OQWT.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Corporate Bond Fund Direct Growth": {
       "ticker": "0P0000XW8D.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Banking & PSU Debt Fund Direct Growth": {
       "ticker": "0P00012KBM.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Gilt Fund Direct Growth": {
       "ticker": "0P0000XW7F.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Dynamic Debt Fund Direct Growth": {
       "ticker": "0P0000XW7L.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Credit Risk Debt Fund Direct Growth": {
       "ticker": "0P00012K1G.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "HDFC Floating Rate Debt Fund Direct Growth": {
       "ticker": "0P0000XW7B.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "HDFC",
       "theme": "Debt"
     },
     "SBI Overnight Fund Direct Growth": {
       "ticker": "0P0000XVKI.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "SBI Liquid Fund Direct Growth": {
       "ticker": "0P0000XVL8.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "SBI Savings Fund Direct Growth": {
       "ticker": "0P0000XVKF.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "SBI Low Duration Fund Direct Growth": {
       "ticker": "0P0000XVLN.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "SBI Short Term Debt Fund Direct Growth": {
       "ticker": "0P0000XVLL.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "SBI Corporate Bond Fund Direct Growth": {
       "ticker": "0P0001FGGV.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "SBI Banking & PSU Fund Direct Growth": {
       "ticker": "0P0000XW1F.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "SBI Gilt Fund Direct Growth": {
       "ticker": "0P0000XVK2.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "SBI Dynamic Bond Fund Direct Growth": {
       "ticker": "0P0000XVJG.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "SBI Credit Risk Fund Direct Growth": {
       "ticker": "0P0000XVKE.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "SBI Long Duration Fund": {
       "ticker": "0P0001Q7X5.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "SBI",
       "theme": "Debt"
     },
     "ICICI Prudential Liquid Fund Direct Growth": {
       "ticker": "0P0000XUYC.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Money Market Fund Direct Growth": {
       "ticker": "0P0000XUYQ.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Savings Fund Direct Growth": {
       "ticker": "0P0000XWAO.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Ultra Short Term Fund Direct Growth": {
       "ticker": "0P0000XWCA.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Short Term Fund Direct Growth": {
       "ticker": "0P0000XUYZ.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Corporate Bond Fund Direct Growth": {
       "ticker": "0P0000XUZE.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Banking & PSU Debt Fund Direct Growth": {
       "ticker": "0P0000YF56.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Gilt Fund Direct Growth": {
       "ticker": "0P0000XUXV.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential All Seasons Bond Fund Direct Growth": {
       "ticker": "0P0000XUYA.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Medium Term Bond Fund Direct Growth": {
       "ticker": "0P0000XYOB.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Long Term Bond Fund Direct Growth": {
       "ticker": "0P0000XUXZ.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Credit Risk Fund Direct Growth": {
       "ticker": "0P0000XUYV.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     },
     "ICICI Prudential Floating Interest Fund Direct Growth": {
       "ticker": "0P0000XUXS.BO",
       "asset_type": "Mutual Fund",
-      "benchmark": "Debt Composite",
+      "benchmark": "LIQUIDBEES.NS",
       "house": "ICICI",
       "theme": "Debt"
     }

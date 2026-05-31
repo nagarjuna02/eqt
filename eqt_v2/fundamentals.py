@@ -197,8 +197,18 @@ def update_fundamentals() -> pd.DataFrame:
     yahoo = fetch_yahoo_fundamentals(universe)
     amfi = fetch_amfi_ter(universe)
     ter = match_ter_to_universe(universe, amfi) if not amfi.empty else pd.DataFrame()
+    if ter.empty:
+        ter = pd.DataFrame(columns=["Ticker", "TER_Direct_Pct", "TER_Regular_Pct", "TER_Date", "TER_Scheme_Name", "TER_Match_Score", "TER_Source"])
 
     fundamentals = yahoo.merge(ter, on="Ticker", how="left")
+    
+    nifty_pe = None
+    try:
+        nifty_pe = yf.Ticker("NIFTYBEES.NS").info.get("trailingPE")
+    except Exception as exc:
+        logger.warning("Failed to fetch NIFTY PE: %s", exc)
+    fundamentals["Nifty_PE"] = nifty_pe
+
     fundamentals["Fundamentals_Updated_At"] = datetime.now().isoformat(timespec="seconds")
     fundamentals.to_parquet(FUNDAMENTALS_PATH, index=False)
     return fundamentals

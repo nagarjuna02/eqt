@@ -219,6 +219,47 @@ def _build_charts(
     return image_paths
 
 
+def _generate_rebalance_html(metrics: pd.DataFrame) -> str:
+    investable = metrics[metrics["Asset_Type"].isin(["Mutual Fund", "ETF"])].copy()
+    candidates = investable[investable["Buy_Low_Score"] >= 60.0].copy()
+
+    lump_sum = float(os.getenv("EQT_MONTHLY_LUMP_SUM", "20000"))
+    currency = os.getenv("EQT_CURRENCY", "INR")
+
+    if candidates.empty:
+        return f"""
+        <div style="background-color: #f3f4f6; border-left: 4px solid #9ca3af; padding: 12px; margin-bottom: 20px;">
+          <h3 style="margin-top: 0; color: #374151;">Market Allocation Strategy ({lump_sum:,.0f} {currency})</h3>
+          <p style="margin-bottom: 0;">Market is currently expensive. No funds meet the value criteria (Buy Low Score &ge; 60). Recommended action: <b>Hold cash</b> or accumulate in liquid funds.</p>
+        </div>
+        """
+
+    candidates["Excess_Score"] = candidates["Buy_Low_Score"] - 50.0
+    candidates["Excess_Score"] = candidates["Excess_Score"].clip(lower=1.0)
+
+    total_excess = candidates["Excess_Score"].sum()
+    candidates["Weight"] = candidates["Excess_Score"] / total_excess
+    candidates["Allocation"] = candidates["Weight"] * lump_sum
+
+    rows_html = []
+    for _, row in candidates.iterrows():
+        allocation_val = row["Allocation"]
+        name = row["Name"]
+        ticker = row["Ticker"]
+        score = row["Buy_Low_Score"]
+        rows_html.append(f"<li><b>{name}</b> ({ticker}) - Allocate <b>{allocation_val:,.0f} {currency}</b> (Score: {score:.1f})</li>")
+
+    return f"""
+    <div style="background-color: #ecfdf5; border-left: 4px solid #10b981; padding: 12px; margin-bottom: 20px;">
+      <h3 style="margin-top: 0; color: #065f46;">Recommended Lump Sum Allocation ({lump_sum:,.0f} {currency})</h3>
+      <p>Based on excess Buy Low Score above a baseline of 50:</p>
+      <ul style="margin-bottom: 0; padding-left: 20px;">
+        {"".join(rows_html)}
+      </ul>
+    </div>
+    """
+
+
 def _build_html_report(
     metrics: pd.DataFrame,
     chart_paths: list[Path],
@@ -255,6 +296,8 @@ def _build_html_report(
         for path in chart_paths
     )
 
+    rebalance_html = _generate_rebalance_html(metrics)
+
     html = f"""<!doctype html>
 <html>
 <head>
@@ -276,6 +319,8 @@ def _build_html_report(
   <p class="muted">Generated {datetime.now():%Y-%m-%d %H:%M}. Latest market data: {latest_date}.</p>
   {app_link}
   <p>CSV snapshot: {csv_path.name}</p>
+
+  {rebalance_html}
 
   <h2>Action Queue</h2>
   {_table_html(deep_value, max_rows=15)}
@@ -306,11 +351,17 @@ def _email_body(metrics: pd.DataFrame, chart_paths: list[Path]) -> str:
     app_url = os.getenv("EQT_APP_URL", "").strip()
     app_link = f'<p><a href="{app_url}">Open the live EQT V2 dashboard</a></p>' if app_url else ""
     chart_html = "\n".join(f'<p><img src="cid:{_cid_for(path)}" style="max-width:100%;"></p>' for path in chart_paths)
+    
+    rebalance_html = _generate_rebalance_html(metrics)
+    
     return f"""<html>
 <body style="font-family:Arial,sans-serif;color:#1f2937;">
   <h2>EQT V2 Monthly Report</h2>
   <p>Latest market data: <b>{latest_date}</b></p>
   {app_link}
+  
+  {rebalance_html}
+  
   <h3>Top Buy Low candidates</h3>
   {_table_html(top, max_rows=12)}
   {chart_html}

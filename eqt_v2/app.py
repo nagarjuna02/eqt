@@ -118,14 +118,29 @@ top_candidates = investable.head(8)
 latest_date = metrics["Latest_Date"].max()
 oldest_latest = metrics["Latest_Date"].min()
 
+fundamentals = load_fundamentals()
+nifty_pe = None
+multiplier = 1.0
+if not fundamentals.empty and "Nifty_PE" in fundamentals.columns:
+    pe_vals = fundamentals["Nifty_PE"].dropna()
+    if not pe_vals.empty:
+        nifty_pe = float(pe_vals.iloc[0])
+        if nifty_pe <= 18:
+            multiplier = 1.2
+        elif nifty_pe >= 26:
+            multiplier = 0.8
+        else:
+            multiplier = 1.2 - 0.05 * (nifty_pe - 18)
+
 st.title("EQT V2")
 
-summary_cols = st.columns(5)
+summary_cols = st.columns(6)
 summary_cols[0].metric("Latest data", str(latest_date))
 summary_cols[1].metric("Tracked", f"{metrics['Ticker'].nunique()} tickers")
 summary_cols[2].metric("Investable", f"{metrics[metrics['Asset_Type'].isin(['Mutual Fund', 'ETF'])]['Ticker'].nunique()}")
-summary_cols[3].metric("Top score", score_fmt(top_candidates["Buy_Low_Score"].max()))
-summary_cols[4].metric("Oldest update", str(oldest_latest))
+summary_cols[3].metric("Nifty 50 PE", f"{nifty_pe:.1f}" if nifty_pe is not None else "N/A", f"Mult: {multiplier:.2f}x" if nifty_pe is not None else "")
+summary_cols[4].metric("Top score", score_fmt(top_candidates["Buy_Low_Score"].max()))
+summary_cols[5].metric("Oldest update", str(oldest_latest))
 
 tab_overview, tab_opportunities, tab_compare, tab_returns, tab_costs, tab_snapshot = st.tabs(
     ["Overview", "Buy Low", "Compare", "Returns", "Costs", "Snapshot"]
@@ -151,6 +166,7 @@ with tab_overview:
             "Drawdown_1Y_Pct",
             "Relative_1Y_To_Benchmark_Pct",
         ]
+        overview_cols = [col for col in overview_cols if col in top_candidates.columns]
         st.subheader("Review Queue")
         st.dataframe(
             top_candidates[overview_cols],
@@ -405,22 +421,22 @@ with tab_costs:
 
 with tab_snapshot:
     st.subheader("Snapshot")
-    snapshot_table = investable.head(12)[
-        [
-            "Name",
-            "House",
-            "Theme",
-            "Buy_Low_Score",
-            "Review_Bucket",
-            "Return_6M_Pct",
-            "Return_1Y_Pct",
-            "Drawdown_1Y_Pct",
-            "Relative_1Y_To_Benchmark_Pct",
-            "TER_Direct_Pct",
-            "Portfolio_PE",
-            "AUM",
-        ]
+    snapshot_cols = [
+        "Name",
+        "House",
+        "Theme",
+        "Buy_Low_Score",
+        "Review_Bucket",
+        "Return_6M_Pct",
+        "Return_1Y_Pct",
+        "Drawdown_1Y_Pct",
+        "Relative_1Y_To_Benchmark_Pct",
+        "TER_Direct_Pct",
+        "Portfolio_PE",
+        "AUM",
     ]
+    snapshot_cols = [col for col in snapshot_cols if col in investable.columns]
+    snapshot_table = investable.head(12)[snapshot_cols]
     st.dataframe(snapshot_table, hide_index=True, use_container_width=True)
     if st.button("Export Snapshot CSV"):
         snapshot_path = create_snapshot(investable)

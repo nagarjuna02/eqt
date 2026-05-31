@@ -318,6 +318,10 @@ def calculate_metrics(prices: pd.DataFrame, universe: pd.DataFrame) -> pd.DataFr
         axis=1,
     )
 
+    pct_cols = [col for col in metrics.columns if col.endswith("_Pct")]
+    for col in pct_cols:
+        metrics[col] = pd.to_numeric(metrics[col], errors="coerce")
+
     investable = metrics["Asset_Type"].isin(["Mutual Fund", "ETF"])
     metrics["Buy_Low_Score"] = None
     scoring = metrics.loc[investable].copy()
@@ -346,6 +350,21 @@ def calculate_metrics(prices: pd.DataFrame, universe: pd.DataFrame) -> pd.DataFr
         weighted_sum = score_components.mul(weights).sum(axis=1, skipna=True)
         available_weight = score_components.notna().mul(weights).sum(axis=1)
         score = weighted_sum / available_weight.where(available_weight > 0)
+
+        # Apply Macro-Valuation Multiplier if nifty_pe is available in fundamentals.parquet
+        fundamentals = load_fundamentals()
+        if not fundamentals.empty and "Nifty_PE" in fundamentals.columns:
+            pe_vals = fundamentals["Nifty_PE"].dropna()
+            if not pe_vals.empty:
+                nifty_pe = float(pe_vals.iloc[0])
+                if nifty_pe <= 18:
+                    mult = 1.2
+                elif nifty_pe >= 26:
+                    mult = 0.8
+                else:
+                    mult = 1.2 - 0.05 * (nifty_pe - 18)
+                score = (score * mult).clip(lower=0.0, upper=100.0)
+
         metrics.loc[scoring.index, "Buy_Low_Score"] = score.round(1)
 
     metrics["Review_Bucket"] = metrics["Buy_Low_Score"].apply(classify_review_bucket)
@@ -361,6 +380,8 @@ def classify_review_bucket(score: float | None) -> str:
         return "Worth Reviewing"
     if score >= 40:
         return "Neutral"
+    if score < 15:
+        return "Expensive - Pause SIP"
     return "Expensive / Strong"
 
 

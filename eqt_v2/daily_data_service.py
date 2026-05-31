@@ -60,6 +60,78 @@ def _should_update(now: datetime, state: dict) -> bool:
     return _scheduled_time_reached(now) and not already_updated
 
 
+def send_alert_email(subject: str, body: str) -> None:
+    import smtplib
+    from email.message import EmailMessage
+
+    host = os.getenv("EQT_EMAIL_SMTP_HOST", "").strip()
+    port = int(os.getenv("EQT_EMAIL_SMTP_PORT", "587"))
+    username = os.getenv("EQT_EMAIL_USERNAME", "").strip()
+    password = os.getenv("EQT_EMAIL_PASSWORD", "")
+    sender = os.getenv("EQT_EMAIL_FROM", username).strip()
+    recipients = [part.strip() for part in os.getenv("EQT_EMAIL_TO", "").replace(";", ",").split(",") if part.strip()]
+    use_tls = os.getenv("EQT_EMAIL_USE_TLS", "true").lower() in {"1", "true", "yes", "y"}
+
+    if not host or not sender or not recipients:
+        logger.warning("Email configuration missing. Cannot send alert.")
+        return
+
+    msg = EmailMessage()
+    msg["Subject"] = subject
+    msg["From"] = sender
+    msg["To"] = ", ".join(recipients)
+    msg.set_content(body)
+
+    smtp_cls = smtplib.SMTP_SSL if port == 465 else smtplib.SMTP
+    with smtp_cls(host, port, timeout=60) as smtp:
+        if port != 465 and use_tls:
+            smtp.starttls()
+        if username:
+            smtp.login(username, password)
+        smtp.send_message(msg)
+
+
+def run_sentinel_check(state: dict) -> None:
+    import pandas as pd
+    from analytics import load_metrics
+
+    metrics = load_metrics()
+    if metrics.empty:
+        return
+
+    investable = metrics[metrics["Asset_Type"].isin(["Mutual Fund", "ETF"])]
+    if investable.empty:
+        return
+
+    sent_alerts = state.setdefault("sent_alerts", {})
+    alert_messages = []
+
+    for _, row in investable.iterrows():
+        ticker = row["Ticker"]
+        name = row["Name"]
+        score = row.get("Buy_Low_Score")
+        drawdown = row.get("Drawdown_1Y_Pct")
+
+        if score is not None and pd.notna(score):
+            if score >= 80.0:
+                if ticker not in sent_alerts:
+                    drawdown_str = f"{drawdown:.1f}%" if drawdown is not None and pd.notna(drawdown) else "N/A"
+                    alert_messages.append(f"- {name} ({ticker}) has entered Deep Value Watch. Score: {score:.1f}. Drawdown: {drawdown_str}.")
+                    sent_alerts[ticker] = datetime.now().date().isoformat()
+            else:
+                if ticker in sent_alerts:
+                    sent_alerts.pop(ticker)
+
+    if alert_messages:
+        subject = f"[PRIORITY ALERT] EQT V2 - Deep Value Entry Detected"
+        body = "The daily data refresh has detected assets entering the Deep Value Watch zone (Buy Low Score >= 80):\n\n" + "\n".join(alert_messages) + "\n\nThis is a priority notification based on your custom investment criteria."
+        try:
+            send_alert_email(subject, body)
+            logger.info("Sent priority alert email for %d assets.", len(alert_messages))
+        except Exception as exc:
+            logger.exception("Failed to send priority alert email: %s", exc)
+
+
 def run_once_if_due() -> bool:
     load_dotenv(APP_DIR / ".env")
     now = datetime.now()
@@ -69,6 +141,12 @@ def run_once_if_due() -> bool:
 
     logger.info("Daily parquet data update is due. Running incremental collector.")
     update_store()
+
+    try:
+        run_sentinel_check(state)
+    except Exception as exc:
+        logger.exception("Sentinel check failed: %s", exc)
+
     state["last_update_date"] = now.date().isoformat()
     state["last_update_at"] = datetime.now().isoformat(timespec="seconds")
     state["mode"] = "incremental"

@@ -2,7 +2,7 @@ from datetime import date
 
 import pandas as pd
 
-from analytics import _repair_price_history, _return_between, normalized_series, trailing_rolling_return
+from analytics import _repair_price_history, _return_between, normalized_series, trailing_rolling_return, classify_review_bucket
 
 
 def test_return_between_rejects_negative_period_from_data_gap():
@@ -103,3 +103,44 @@ def test_price_repair_adjusts_persistent_split_step():
 
     assert trend["Normalized"].max() < 105
     assert trend["Normalized"].min() > 95
+
+
+def test_classify_review_bucket_expensive_pause_sip():
+    assert classify_review_bucket(10.0) == "Expensive - Pause SIP"
+    assert classify_review_bucket(14.9) == "Expensive - Pause SIP"
+    assert classify_review_bucket(15.0) == "Expensive / Strong"
+    assert classify_review_bucket(30.0) == "Expensive / Strong"
+
+
+def test_pe_multiplier_scaling():
+    from unittest.mock import patch
+    from analytics import calculate_metrics
+
+    prices = pd.DataFrame({
+        "Date": [date(2025, 1, 1), date(2025, 5, 24)],
+        "Ticker": ["TEST", "TEST"],
+        "Close": [100.0, 90.0]
+    })
+    universe = pd.DataFrame([{
+        "Name": "Test Fund",
+        "Ticker": "TEST",
+        "Category": "Thematic Funds",
+        "Asset_Type": "Mutual Fund",
+        "Benchmark": "TEST",
+        "House": "SBI",
+        "Theme": "Technology"
+    }])
+
+    # Mock Nifty PE = 18.0 (multiplier should be 1.2)
+    with patch("analytics.load_fundamentals") as mock_load:
+        mock_load.return_value = pd.DataFrame([{"Ticker": "TEST", "Nifty_PE": 18.0}])
+        metrics_low_pe = calculate_metrics(prices, universe)
+        score_low = metrics_low_pe.iloc[0]["Buy_Low_Score"]
+
+    # Mock Nifty PE = 26.0 (multiplier should be 0.8)
+    with patch("analytics.load_fundamentals") as mock_load:
+        mock_load.return_value = pd.DataFrame([{"Ticker": "TEST", "Nifty_PE": 26.0}])
+        metrics_high_pe = calculate_metrics(prices, universe)
+        score_high = metrics_high_pe.iloc[0]["Buy_Low_Score"]
+
+    assert score_low > score_high
